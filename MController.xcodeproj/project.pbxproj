@@ -20,7 +20,6 @@
 		4A2D23BB22BB70E500494C55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D23BA22BB70E500494C55 /* Assets.xcassets */; };
 		4A2D23BE22BB70E500494C55 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D23BC22BB70E500494C55 /* LaunchScreen.storyboard */; };
 		4AA5C4B822BB9CC200277977 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5C4B722BB9CC200277977 /* VideoCapture.swift */; };
-		50E5D801247B932E00A25665 /* SummaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50E5D800247B932E00A25665 /* SummaryViewController.swift */; };
 		DF20C7362578044800C9DB98 /* Pose+Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF20C7352578044800C9DB98 /* Pose+Landmark.swift */; };
 		DF20C7392578047E00C9DB98 /* Pose+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF20C7382578047E00C9DB98 /* Pose+Connection.swift */; };
 		DF20C73C257805AE00C9DB98 /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF20C73B257805AE00C9DB98 /* Pose+Empty.swift */; };
@@ -49,7 +48,6 @@
 		4A2D23BD22BB70E500494C55 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4A2D23BF22BB70E500494C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AA5C4B722BB9CC200277977 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
-		50E5D800247B932E00A25665 /* SummaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SummaryViewController.swift; sourceTree = "<group>"; };
 		57C02DF057C02B4000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		A7EFFBC4008F114FF6A77F64 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DF20C7352578044800C9DB98 /* Pose+Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Landmark.swift"; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				4A2D23B522BB70E400494C55 /* MainViewController.swift */,
-				50E5D800247B932E00A25665 /* SummaryViewController.swift */,
 				4A2D23B722BB70E400494C55 /* Main.storyboard */,
 			);
 			path = Views;
@@ -291,7 +288,6 @@
 				0BE3D264298921EE00C8ED2B /* ActionPrediction.swift in Sources */,
 				DF20C7392578047E00C9DB98 /* Pose+Connection.swift in Sources */,
 				FADD45BD24D55CE200955140 /* AVCaptureDevice+FrameRate.swift in Sources */,
-				50E5D801247B932E00A25665 /* SummaryViewController.swift in Sources */,
 				0BE3D268298921EE00C8ED2B /* ActionClassifier.mlmodel in Sources */,
 				0BE3D267298921EE00C8ED2B /* ActionClassifier+Singleton.swift in Sources */,
 				4A2D23B622BB70E400494C55 /* MainViewController.swift in Sources */,

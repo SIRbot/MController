@@ -25,9 +25,6 @@ class MainViewController: UIViewController {
     /// The stack that contains the buttons at the bottom of the leading edge.
     @IBOutlet weak var buttonStack: UIStackView!
 
-    /// The button users tap to show a summary view.
-    @IBOutlet weak var summaryButton: UIButton!
-
     /// The button users tap to toggle between the front- and back-facing
     /// cameras.
     @IBOutlet weak var cameraButton: UIButton!
@@ -58,7 +55,7 @@ extension MainViewController {
         UIApplication.shared.isIdleTimerDisabled = true
 
         // Round the corners of the stack and button views.
-        let views = [labelStack, buttonStack, cameraButton, summaryButton]
+        let views = [labelStack, buttonStack, cameraButton]
         views.forEach { view in
             view?.layer.cornerRadius = 10
             view?.overrideUserInterfaceStyle = .dark
@@ -101,41 +98,6 @@ extension MainViewController {
         videoCapture.toggleCameraSelection()
     }
 
-    /// Presents a summary view of the user's actions and their total times.
-    @IBAction func onSummaryButtonTapped() {
-        let main = UIStoryboard(name: "Main", bundle: nil)
-
-        // Get the view controller based on its name.
-        let vcName = "SummaryViewController"
-        let viewController = main.instantiateViewController(identifier: vcName)
-
-        // Cast it as a `SummaryViewController`.
-        guard let summaryVC = viewController as? SummaryViewController else {
-            fatalError("Couldn't cast the Summary View Controller.")
-        }
-
-        // Copy the current actions times to the summary view.
-        summaryVC.actionFrameCounts = actionFrameCounts
-
-        // Define the presentation style for the summary view.
-        modalPresentationStyle = .popover
-        modalTransitionStyle = .coverVertical
-
-        // Reestablish the video-processing chain when the user dismisses the
-        // summary view.
-        summaryVC.dismissalClosure = {
-            // Resume the video feed by enabling the camera when the summary
-            // view goes away.
-            self.videoCapture.isEnabled = true
-        }
-
-        // Present the summary view to the user.
-        present(summaryVC, animated: true)
-
-        // Stop the video feed by disabling the camera while showing the summary
-        // view.
-        videoCapture.isEnabled = false
-    }
 }
 
 // MARK: - Video Capture Delegate
