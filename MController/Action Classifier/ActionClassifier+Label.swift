@@ -11,6 +11,11 @@ extension ActionClassifier {
         case jump = "jump"
         case stand = "stand"
         case walk = "walk"
+//        case walkF = "walkF"
+//        case walkFL = "walkFL"
+//        case walkFR = "walkFR"
+//        case walkL = "walkL"
+//        case walkR = "walkR"
         case run = "run"
         case squat = "squat"
 

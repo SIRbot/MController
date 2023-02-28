@@ -8,6 +8,7 @@ A `Pose` is a collection of "landmarks" and connections between select landmarks
 
 import UIKit
 import Vision
+import FlatBuffers
 
 typealias Observation = VNHumanBodyPoseObservation
 /// Stores the landmarks and connections of a human body pose and draws them as
@@ -26,6 +27,9 @@ struct Pose {
 
     /// A rough approximation of the landmarks' area.
     let area: CGFloat
+    
+    /// The corresponding flatbuffer data of this Pose
+    var poseData: Data!
 
     /// Creates a `Pose` for each human body pose observation in the array.
     /// - Parameter observations: An array of human body pose observations.
@@ -61,6 +65,9 @@ struct Pose {
 
         // Build a list of connections from the pose's landmarks.
         buildConnections()
+        
+        // convert to flatbuffer
+        poseData = Pose.poseData(landmarks)
     }
 
     /// Draws all the valid connections and landmarks of the wireframe.
@@ -157,5 +164,24 @@ extension Pose {
         let deltaY = maxY - minY
 
         return deltaX * deltaY
+    }
+    
+    static func poseData(_ landmarks: [Landmark]) -> Data {
+        var builder = FlatBufferBuilder(initialSize: 1024)
+        
+        var landmarksData : [Offset] = []
+        for landmark in landmarks {
+            let name = builder.create(string: landmark.name.rawValue.rawValue)
+            let landmarkData = MController_Landmark.createLandmark(&builder, x: Float32(landmark.location.x), y: Float32(landmark.location.y), z: 0.0, confidence: 1.0, nameOffset: name)
+            landmarksData.append(landmarkData)
+        }
+        let landmarksDataOffset = builder.createVector(ofOffsets: landmarksData)
+        
+        let poseData = MController_Pose.createPose(&builder, landmarksVectorOffset: landmarksDataOffset)
+        builder.finish(offset: poseData)
+        
+        var data = builder.data
+
+        return data
     }
 }

@@ -129,7 +129,9 @@ extension MainViewController: VideoProcessingChainDelegate {
 
         if actionPrediction.isModelLabel {
             // Update the total number of frames for this action.
-            addFrameCount(frameCount, to: actionPrediction.label)
+//            addFrameCount(frameCount, to: actionPrediction.label)
+            sharedConnection?.sendAction(actionPrediction.label)
+            print("send action: " + actionPrediction.label)
         }
 
         // Present the prediction in the UI.
@@ -144,6 +146,7 @@ extension MainViewController: VideoProcessingChainDelegate {
     func videoProcessingChain(_ chain: VideoProcessingChain,
                               didDetect poses: [Pose]?,
                               in frame: CGImage) {
+        sharedConnection?.sendPoses(poses!)
         // Render the poses on a different queue than pose publisher.
         DispatchQueue.global(qos: .userInteractive).async {
             // Draw the poses onto the frame.

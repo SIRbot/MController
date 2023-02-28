@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0BE8A729938972004E3215 /* PeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8A529938972004E3215 /* PeerListViewController.swift */; };
+		0B0BE8A829938972004E3215 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8A629938972004E3215 /* PasscodeViewController.swift */; };
+		0B0BE8BA299E1A70004E3215 /* pose_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8B9299E1A70004E3215 /* pose_generated.swift */; };
+		0B0BE8C1299E1E00004E3215 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0BE8C0299E1E00004E3215 /* FlatBuffers */; };
+		0B0BE8EC299F50F2004E3215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8EB299F50F2004E3215 /* AppDelegate.swift */; };
+		0B0BE8EE299F50F2004E3215 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8ED299F50F2004E3215 /* ViewController.swift */; };
+		0B0BE8F1299F50F2004E3215 /* MotionHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8EF299F50F2004E3215 /* MotionHub.xcdatamodeld */; };
+		0B0BE8F3299F50F3004E3215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0BE8F2299F50F3004E3215 /* Assets.xcassets */; };
+		0B0BE8F6299F50F3004E3215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0BE8F4299F50F3004E3215 /* Main.storyboard */; };
+		0B0BE8FC299F5166004E3215 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0BE8FB299F5166004E3215 /* FlatBuffers */; };
+		0B0BE8FD299F51B9004E3215 /* PeerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26B298A312300C8ED2B /* PeerConnection.swift */; };
+		0B0BE8FE299F51BC004E3215 /* ControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26D298A312300C8ED2B /* ControlProtocol.swift */; };
+		0B0BE8FF299F51C0004E3215 /* NWParameters+InitWithPasscode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26E298A312300C8ED2B /* NWParameters+InitWithPasscode.swift */; };
+		0B0BE904299F51CC004E3215 /* pose_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8B9299E1A70004E3215 /* pose_generated.swift */; };
+		0B0BE907299F529E004E3215 /* PeerConnection+Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE906299F529E004E3215 /* PeerConnection+Send.swift */; };
+		0B0BE908299F532E004E3215 /* PeerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26C298A312300C8ED2B /* PeerListener.swift */; };
 		0BE3D263298921EE00C8ED2B /* ActionClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */; };
 		0BE3D264298921EE00C8ED2B /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */; };
 		0BE3D265298921EE00C8ED2B /* ActionClassifier+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */; };
@@ -14,6 +30,11 @@
 		0BE3D267298921EE00C8ED2B /* ActionClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D260298921EE00C8ED2B /* ActionClassifier+Singleton.swift */; };
 		0BE3D268298921EE00C8ED2B /* ActionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D261298921EE00C8ED2B /* ActionClassifier.mlmodel */; };
 		0BE3D269298921EE00C8ED2B /* ActionClassifier+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D262298921EE00C8ED2B /* ActionClassifier+Label.swift */; };
+		0BE3D270298A312300C8ED2B /* PeerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26B298A312300C8ED2B /* PeerConnection.swift */; };
+		0BE3D271298A312300C8ED2B /* PeerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26C298A312300C8ED2B /* PeerListener.swift */; };
+		0BE3D272298A312300C8ED2B /* ControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26D298A312300C8ED2B /* ControlProtocol.swift */; };
+		0BE3D273298A312300C8ED2B /* NWParameters+InitWithPasscode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26E298A312300C8ED2B /* NWParameters+InitWithPasscode.swift */; };
+		0BE3D274298A312300C8ED2B /* PeerBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26F298A312300C8ED2B /* PeerBrowser.swift */; };
 		4A2D23B222BB70E400494C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D23B122BB70E400494C55 /* AppDelegate.swift */; };
 		4A2D23B622BB70E400494C55 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D23B522BB70E400494C55 /* MainViewController.swift */; };
 		4A2D23B922BB70E400494C55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D23B722BB70E400494C55 /* Main.storyboard */; };
@@ -32,6 +53,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B0BE8A529938972004E3215 /* PeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListViewController.swift; sourceTree = "<group>"; };
+		0B0BE8A629938972004E3215 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		0B0BE8B9299E1A70004E3215 /* pose_generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pose_generated.swift; sourceTree = "<group>"; };
+		0B0BE8BC299E1C6D004E3215 /* flatbuffers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = flatbuffers; sourceTree = "<group>"; };
+		0B0BE8C2299E20A2004E3215 /* pose.fbs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pose.fbs; sourceTree = "<group>"; };
+		0B0BE8E9299F50F1004E3215 /* MotionHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0BE8EB299F50F2004E3215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B0BE8ED299F50F2004E3215 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B0BE8F0299F50F2004E3215 /* MotionHub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MotionHub.xcdatamodel; sourceTree = "<group>"; };
+		0B0BE8F2299F50F3004E3215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B0BE8F5299F50F3004E3215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B0BE8F7299F50F3004E3215 /* MotionHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MotionHub.entitlements; sourceTree = "<group>"; };
+		0B0BE906299F529E004E3215 /* PeerConnection+Send.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeerConnection+Send.swift"; sourceTree = "<group>"; };
 		0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+PredictAction.swift"; sourceTree = "<group>"; };
 		0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
 		0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+FrameRate.swift"; sourceTree = "<group>"; };
@@ -39,7 +73,11 @@
 		0BE3D260298921EE00C8ED2B /* ActionClassifier+Singleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+Singleton.swift"; sourceTree = "<group>"; };
 		0BE3D261298921EE00C8ED2B /* ActionClassifier.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = ActionClassifier.mlmodel; sourceTree = "<group>"; };
 		0BE3D262298921EE00C8ED2B /* ActionClassifier+Label.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+Label.swift"; sourceTree = "<group>"; };
-		12E34EC925104636003C138C /* MController.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = MController.entitlements; sourceTree = "<group>"; };
+		0BE3D26B298A312300C8ED2B /* PeerConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerConnection.swift; sourceTree = "<group>"; };
+		0BE3D26C298A312300C8ED2B /* PeerListener.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListener.swift; sourceTree = "<group>"; };
+		0BE3D26D298A312300C8ED2B /* ControlProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlProtocol.swift; sourceTree = "<group>"; };
+		0BE3D26E298A312300C8ED2B /* NWParameters+InitWithPasscode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NWParameters+InitWithPasscode.swift"; sourceTree = "<group>"; };
+		0BE3D26F298A312300C8ED2B /* PeerBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerBrowser.swift; sourceTree = "<group>"; };
 		4A2D23AE22BB70E400494C55 /* MController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2D23B122BB70E400494C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A2D23B522BB70E400494C55 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -49,7 +87,6 @@
 		4A2D23BF22BB70E500494C55 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4AA5C4B722BB9CC200277977 /* VideoCapture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCapture.swift; sourceTree = "<group>"; };
 		57C02DF057C02B4000000001 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		A7EFFBC4008F114FF6A77F64 /* LICENSE.txt */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = LICENSE.txt; sourceTree = "<group>"; };
 		DF20C7352578044800C9DB98 /* Pose+Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Landmark.swift"; sourceTree = "<group>"; };
 		DF20C7382578047E00C9DB98 /* Pose+Connection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Connection.swift"; sourceTree = "<group>"; };
 		DF20C73B257805AE00C9DB98 /* Pose+Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Pose+Empty.swift"; sourceTree = "<group>"; };
@@ -63,24 +100,78 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0B0BE8E6299F50F1004E3215 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B0BE8FC299F5166004E3215 /* FlatBuffers in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A2D23AB22BB70E400494C55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B0BE8C1299E1E00004E3215 /* FlatBuffers in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0B0BE8BB299E1C6D004E3215 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				0B0BE8BC299E1C6D004E3215 /* flatbuffers */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		0B0BE8BF299E1E00004E3215 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0B0BE8EA299F50F2004E3215 /* MotionHub */ = {
+			isa = PBXGroup;
+			children = (
+				0B0BE8EB299F50F2004E3215 /* AppDelegate.swift */,
+				0B0BE8ED299F50F2004E3215 /* ViewController.swift */,
+				0B0BE8F2299F50F3004E3215 /* Assets.xcassets */,
+				0B0BE8F4299F50F3004E3215 /* Main.storyboard */,
+				0B0BE8F7299F50F3004E3215 /* MotionHub.entitlements */,
+				0B0BE8EF299F50F2004E3215 /* MotionHub.xcdatamodeld */,
+			);
+			path = MotionHub;
+			sourceTree = "<group>";
+		};
+		0BE3D26A298A312300C8ED2B /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				0BE3D26B298A312300C8ED2B /* PeerConnection.swift */,
+				0BE3D26C298A312300C8ED2B /* PeerListener.swift */,
+				0BE3D26D298A312300C8ED2B /* ControlProtocol.swift */,
+				0BE3D26E298A312300C8ED2B /* NWParameters+InitWithPasscode.swift */,
+				0BE3D26F298A312300C8ED2B /* PeerBrowser.swift */,
+				0B0BE906299F529E004E3215 /* PeerConnection+Send.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
 		4A2D23A522BB70E400494C55 = {
 			isa = PBXGroup;
 			children = (
+				0B0BE8BB299E1C6D004E3215 /* Packages */,
 				57C02DF057C02B4000000001 /* README.md */,
+				DF96FB2D256880390086C3AB /* Pose */,
+				0BE3D26A298A312300C8ED2B /* Networking */,
 				4A2D23B022BB70E400494C55 /* MController */,
+				0B0BE8EA299F50F2004E3215 /* MotionHub */,
 				4A2D23AF22BB70E400494C55 /* Products */,
 				E8C7BE0DE8736748F8673979 /* Configuration */,
-				CC72525E56AA0CF9B92F2E67 /* LICENSE */,
+				0B0BE8BF299E1E00004E3215 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -88,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				4A2D23AE22BB70E400494C55 /* MController.app */,
+				0B0BE8E9299F50F1004E3215 /* MotionHub.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -97,7 +189,6 @@
 			children = (
 				4AFBF15222CC9A1300A4B11A /* Video Capture */,
 				DF141726255E0E2B007498A9 /* Video Processing Chain */,
-				DF96FB2D256880390086C3AB /* Pose */,
 				50C8DA9323D13B6300734053 /* Action Classifier */,
 				6594E51A23454A2300D3C44D /* Views */,
 				6594E5192345489C00D3C44D /* App */,
@@ -138,7 +229,6 @@
 				4A2D23BA22BB70E500494C55 /* Assets.xcassets */,
 				4A2D23B122BB70E400494C55 /* AppDelegate.swift */,
 				4A2D23BC22BB70E500494C55 /* LaunchScreen.storyboard */,
-				12E34EC925104636003C138C /* MController.entitlements */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -146,18 +236,12 @@
 		6594E51A23454A2300D3C44D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0B0BE8A629938972004E3215 /* PasscodeViewController.swift */,
+				0B0BE8A529938972004E3215 /* PeerListViewController.swift */,
 				4A2D23B522BB70E400494C55 /* MainViewController.swift */,
 				4A2D23B722BB70E400494C55 /* Main.storyboard */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		CC72525E56AA0CF9B92F2E67 /* LICENSE */ = {
-			isa = PBXGroup;
-			children = (
-				A7EFFBC4008F114FF6A77F64 /* LICENSE.txt */,
-			);
-			path = LICENSE;
 			sourceTree = "<group>";
 		};
 		DF141726255E0E2B007498A9 /* Video Processing Chain */ = {
@@ -171,6 +255,8 @@
 		DF96FB2D256880390086C3AB /* Pose */ = {
 			isa = PBXGroup;
 			children = (
+				0B0BE8C2299E20A2004E3215 /* pose.fbs */,
+				0B0BE8B9299E1A70004E3215 /* pose_generated.swift */,
 				DFA9EECA2571951800849AFB /* Pose.swift */,
 				DF20C7352578044800C9DB98 /* Pose+Landmark.swift */,
 				DF20C7382578047E00C9DB98 /* Pose+Connection.swift */,
@@ -208,6 +294,26 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0B0BE8E8299F50F1004E3215 /* MotionHub */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B0BE8F8299F50F3004E3215 /* Build configuration list for PBXNativeTarget "MotionHub" */;
+			buildPhases = (
+				0B0BE8E5299F50F1004E3215 /* Sources */,
+				0B0BE8E6299F50F1004E3215 /* Frameworks */,
+				0B0BE8E7299F50F1004E3215 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MotionHub;
+			packageProductDependencies = (
+				0B0BE8FB299F5166004E3215 /* FlatBuffers */,
+			);
+			productName = MotionHub;
+			productReference = 0B0BE8E9299F50F1004E3215 /* MotionHub.app */;
+			productType = "com.apple.product-type.application";
+		};
 		4A2D23AD22BB70E400494C55 /* MController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A2D23C222BB70E500494C55 /* Build configuration list for PBXNativeTarget "MController" */;
@@ -222,6 +328,9 @@
 			dependencies = (
 			);
 			name = MController;
+			packageProductDependencies = (
+				0B0BE8C0299E1E00004E3215 /* FlatBuffers */,
+			);
 			productName = GuessMyExercise;
 			productReference = 4A2D23AE22BB70E400494C55 /* MController.app */;
 			productType = "com.apple.product-type.application";
@@ -232,10 +341,14 @@
 		4A2D23A622BB70E400494C55 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1200;
+				DefaultBuildSystemTypeForWorkspace = Latest;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = Apple;
 				TargetAttributes = {
+					0B0BE8E8299F50F1004E3215 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					4A2D23AD22BB70E400494C55 = {
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1200;
@@ -256,11 +369,21 @@
 			projectRoot = "";
 			targets = (
 				4A2D23AD22BB70E400494C55 /* MController */,
+				0B0BE8E8299F50F1004E3215 /* MotionHub */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0B0BE8E7299F50F1004E3215 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B0BE8F3299F50F3004E3215 /* Assets.xcassets in Resources */,
+				0B0BE8F6299F50F3004E3215 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A2D23AC22BB70E400494C55 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -274,35 +397,67 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0B0BE8E5299F50F1004E3215 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B0BE8F1299F50F2004E3215 /* MotionHub.xcdatamodeld in Sources */,
+				0B0BE904299F51CC004E3215 /* pose_generated.swift in Sources */,
+				0B0BE8EE299F50F2004E3215 /* ViewController.swift in Sources */,
+				0B0BE8EC299F50F2004E3215 /* AppDelegate.swift in Sources */,
+				0B0BE8FD299F51B9004E3215 /* PeerConnection.swift in Sources */,
+				0B0BE908299F532E004E3215 /* PeerListener.swift in Sources */,
+				0B0BE8FF299F51C0004E3215 /* NWParameters+InitWithPasscode.swift in Sources */,
+				0B0BE8FE299F51BC004E3215 /* ControlProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A2D23AA22BB70E400494C55 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BE3D273298A312300C8ED2B /* NWParameters+InitWithPasscode.swift in Sources */,
 				0BE3D265298921EE00C8ED2B /* ActionClassifier+FrameRate.swift in Sources */,
 				DF96FB1F256864520086C3AB /* PerformanceReporter.swift in Sources */,
 				DF898FB425AFC15700CA35A8 /* AVCaptureDeviceInput+Camera.swift in Sources */,
+				0BE3D274298A312300C8ED2B /* PeerBrowser.swift in Sources */,
+				0B0BE907299F529E004E3215 /* PeerConnection+Send.swift in Sources */,
 				0BE3D266298921EE00C8ED2B /* ActionClassifier+LabelCheck.swift in Sources */,
 				0BE3D263298921EE00C8ED2B /* ActionClassifier+PredictAction.swift in Sources */,
 				0BE3D269298921EE00C8ED2B /* ActionClassifier+Label.swift in Sources */,
 				4AA5C4B822BB9CC200277977 /* VideoCapture.swift in Sources */,
 				0BE3D264298921EE00C8ED2B /* ActionPrediction.swift in Sources */,
 				DF20C7392578047E00C9DB98 /* Pose+Connection.swift in Sources */,
+				0BE3D272298A312300C8ED2B /* ControlProtocol.swift in Sources */,
 				FADD45BD24D55CE200955140 /* AVCaptureDevice+FrameRate.swift in Sources */,
 				0BE3D268298921EE00C8ED2B /* ActionClassifier.mlmodel in Sources */,
 				0BE3D267298921EE00C8ED2B /* ActionClassifier+Singleton.swift in Sources */,
 				4A2D23B622BB70E400494C55 /* MainViewController.swift in Sources */,
+				0B0BE8A729938972004E3215 /* PeerListViewController.swift in Sources */,
 				DFE2078525AFECC800FB76EF /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
+				0BE3D271298A312300C8ED2B /* PeerListener.swift in Sources */,
 				DFA9EECB2571951800849AFB /* Pose.swift in Sources */,
+				0B0BE8BA299E1A70004E3215 /* pose_generated.swift in Sources */,
 				DF20C73C257805AE00C9DB98 /* Pose+Empty.swift in Sources */,
 				DF20C7362578044800C9DB98 /* Pose+Landmark.swift in Sources */,
+				0B0BE8A829938972004E3215 /* PasscodeViewController.swift in Sources */,
 				DFD1ED022564427700466FDA /* VideoProcessingChain.swift in Sources */,
 				4A2D23B222BB70E400494C55 /* AppDelegate.swift in Sources */,
+				0BE3D270298A312300C8ED2B /* PeerConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0B0BE8F4299F50F3004E3215 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B0BE8F5299F50F3004E3215 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		4A2D23B722BB70E400494C55 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -322,6 +477,66 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0B0BE8F9299F50F3004E3215 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = MotionHub/MotionHub.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5M2VU5836;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Apple. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RongStudio.mcontrollr.MotionHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0B0BE8FA299F50F3004E3215 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = MotionHub/MotionHub.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5M2VU5836;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Apple. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = RongStudio.mcontrollr.MotionHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		4A2D23C022BB70E500494C55 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = DF3B5CB0E5C5500F21BAB608 /* SampleCode.xcconfig */;
@@ -454,7 +669,7 @@
 				DEVELOPMENT_TEAM = Y5M2VU5836;
 				INFOPLIST_FILE = MController/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MController;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -482,7 +697,7 @@
 				DEVELOPMENT_TEAM = Y5M2VU5836;
 				INFOPLIST_FILE = MController/App/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = MController;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -500,6 +715,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0B0BE8F8299F50F3004E3215 /* Build configuration list for PBXNativeTarget "MotionHub" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B0BE8F9299F50F3004E3215 /* Debug */,
+				0B0BE8FA299F50F3004E3215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4A2D23A922BB70E400494C55 /* Build configuration list for PBXProject "MController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -519,6 +743,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0B0BE8C0299E1E00004E3215 /* FlatBuffers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlatBuffers;
+		};
+		0B0BE8FB299F5166004E3215 /* FlatBuffers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlatBuffers;
+		};
+/* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		0B0BE8EF299F50F2004E3215 /* MotionHub.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B0BE8F0299F50F2004E3215 /* MotionHub.xcdatamodel */,
+			);
+			currentVersion = 0B0BE8F0299F50F2004E3215 /* MotionHub.xcdatamodel */;
+			path = MotionHub.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4A2D23A622BB70E400494C55 /* Project object */;
 }
