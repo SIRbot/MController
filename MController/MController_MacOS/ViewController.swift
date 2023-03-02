@@ -174,11 +174,15 @@ extension ViewController {
         }
         
         // Get the inverse of the current transform matrix (CTM).
-        let inverse = cgContext.ctm.inverted()
+//        let inverse = cgContext.ctm.inverted()
 
         // Restore the Y-Axis by multiplying the CTM by its inverse to reset
         // the context's transform matrix to the identity.
-        cgContext.concatenate(inverse)
+//        cgContext.concatenate(inverse)
+        
+        let mirror = CGAffineTransform(a: -1, b: 0, c: 0, d: 1, tx: frameSize.width, ty: 0)
+        
+        cgContext.concatenate(mirror)
         
         // Draw the camera image first as the background.
         let imageRectangle = CGRect(origin: .zero, size: frameSize)
