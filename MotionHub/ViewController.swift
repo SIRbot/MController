@@ -29,40 +29,6 @@ class ViewController: NSViewController, NSWindowDelegate {
     
     var avatarState = AvatarState()
     
-    var eventSrc: CGEventSource?
-    let tapLoc =  CGEventTapLocation.cghidEventTap
-    var upKeyD: CGEvent?
-    var upKeyU: CGEvent?
-    var downKeyD: CGEvent?
-    var downKeyU: CGEvent?
-    var rightKeyD: CGEvent?
-    var rightKeyU: CGEvent?
-    var leftKeyD: CGEvent?
-    var leftKeyU: CGEvent?
-    var spaceKeyD: CGEvent?
-    var spaceKeyU: CGEvent?
-    var shiftKeyD: CGEvent?
-    var shiftKeyU: CGEvent?
-    var qKeyD: CGEvent?
-    var qKeyU: CGEvent?
-    var eKeyD: CGEvent?
-    var eKeyU: CGEvent?
-    var fKeyD: CGEvent?
-    var fKeyU: CGEvent?
-    var wKeyD: CGEvent?
-    var wKeyU: CGEvent?
-    var sKeyD: CGEvent?
-    var sKeyU: CGEvent?
-    var aKeyD: CGEvent?
-    var aKeyU: CGEvent?
-    var dKeyD: CGEvent?
-    var dKeyU: CGEvent?
-    var oKeyD: CGEvent?
-    var oKeyU: CGEvent?
-    var uKeyD: CGEvent?
-    var uKeyU: CGEvent?
-    var mouseRight: CGEvent?
-    
     let upKeyCode: CGKeyCode = 126
     let downKeyCode: CGKeyCode = 125
     let rightKeyCode: CGKeyCode = 124
@@ -82,42 +48,7 @@ class ViewController: NSViewController, NSWindowDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.eventSrc = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        
-        self.upKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 126, keyDown: true)
-        self.upKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 126, keyDown: false)
-        self.downKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 125, keyDown: true)
-        self.downKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 125, keyDown: false)
-        self.rightKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 124, keyDown: true)
-        self.rightKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 124, keyDown: false)
-        self.leftKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 123, keyDown: true)
-        self.leftKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 123, keyDown: false)
-        self.spaceKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 49, keyDown: true)
-        self.spaceKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 49, keyDown: false)
-        self.shiftKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 60, keyDown: true)
-        self.shiftKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 60, keyDown: false)
-        self.qKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 12, keyDown: true)
-        self.qKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 12, keyDown: false)
-        self.eKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 14, keyDown: true)
-        self.eKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 14, keyDown: false)
-        self.fKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 3, keyDown: true)
-        self.fKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 3, keyDown: false)
-        self.wKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 13, keyDown: true)
-        self.wKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 13, keyDown: false)
-        self.sKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 1, keyDown: true)
-        self.sKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 1, keyDown: false)
-        self.dKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 2, keyDown: true)
-        self.dKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 2, keyDown: false)
-        self.aKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 0, keyDown: true)
-        self.aKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: 0, keyDown: false)
-        self.oKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: self.oKeyCode, keyDown: true)
-        self.oKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: self.oKeyCode, keyDown: false)
-        self.uKeyD = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: self.uKeyCode, keyDown: true)
-        self.uKeyU = CGEvent(keyboardEventSource: self.eventSrc, virtualKey: self.uKeyCode, keyDown: false)
-        
-        self.mouseRight = CGEvent(mouseEventSource: self.eventSrc, mouseType: .mouseMoved, mouseCursorPosition: CGPoint(x: 100, y: 0), mouseButton: .left)
-        
+    
         passcode = generatePasscode()
         centerLabel.stringValue = passcode
         print(passcode)

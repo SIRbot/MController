@@ -6,13 +6,18 @@ A `Connection` defines the line between two landmarks.
  The only real purpose for a connection is to draw that line with a gradient.
 */
 
+#if !os(OSX)
 import UIKit
+#else
+import Cocoa
+#endif
 
 extension Pose {
     /// Represents a line between two landmarks.
     struct Connection: Equatable {
         static let width: CGFloat = 12.0
 
+        #if !os(OSX)
         /// The gradient colors the connection uses to draw its line.
         static let colors = [UIColor.systemGreen.cgColor,
                              UIColor.systemYellow.cgColor,
@@ -21,6 +26,15 @@ extension Pose {
                              UIColor.systemPurple.cgColor,
                              UIColor.systemBlue.cgColor
         ] as CFArray
+        #else
+        static let colors = [NSColor.systemGreen.cgColor,
+                             NSColor.systemYellow.cgColor,
+                             NSColor.systemOrange.cgColor,
+                             NSColor.systemRed.cgColor,
+                             NSColor.systemPurple.cgColor,
+                             NSColor.systemBlue.cgColor
+        ] as CFArray
+        #endif
 
         static let gradientColorSpace = CGColorSpace(name: CGColorSpace.sRGB)
 

@@ -8,7 +8,11 @@ A `Landmark` is the name and location of a point on a human body, including:
  - Nose
 */
 
+#if !os(OSX)
 import UIKit
+#else
+import Cocoa
+#endif
 import Vision
 
 extension Pose {
@@ -57,8 +61,13 @@ extension Pose {
                            applying transform: CGAffineTransform? = nil,
                            at scale: CGFloat = 1.0) {
 
+            #if os(OSX)
+            context.setFillColor(NSColor.white.cgColor)
+            context.setStrokeColor(NSColor.darkGray.cgColor)
+            #else
             context.setFillColor(UIColor.white.cgColor)
             context.setStrokeColor(UIColor.darkGray.cgColor)
+            #endif
 
             // Define the rectangle's origin by applying the transform to the
             // landmark's normalized location.

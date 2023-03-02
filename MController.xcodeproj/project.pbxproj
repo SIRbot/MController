@@ -23,6 +23,31 @@
 		0B0BE904299F51CC004E3215 /* pose_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8B9299E1A70004E3215 /* pose_generated.swift */; };
 		0B0BE907299F529E004E3215 /* PeerConnection+Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE906299F529E004E3215 /* PeerConnection+Send.swift */; };
 		0B0BE908299F532E004E3215 /* PeerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26C298A312300C8ED2B /* PeerListener.swift */; };
+		0B390AE529AE067A005DFB16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390AE429AE067A005DFB16 /* AppDelegate.swift */; };
+		0B390AE729AE067A005DFB16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390AE629AE067A005DFB16 /* ViewController.swift */; };
+		0B390AEA29AE067A005DFB16 /* MController_MacOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B390AE829AE067A005DFB16 /* MController_MacOS.xcdatamodeld */; };
+		0B390AEC29AE067B005DFB16 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B390AEB29AE067B005DFB16 /* Assets.xcassets */; };
+		0B390AEF29AE067B005DFB16 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B390AED29AE067B005DFB16 /* Main.storyboard */; };
+		0B390AF629AE11C7005DFB16 /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFE2078425AFECC800FB76EF /* AVCaptureVideoDataOutput+PixelFormat.swift */; };
+		0B390AF729AE11C7005DFB16 /* VideoCapture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AA5C4B722BB9CC200277977 /* VideoCapture.swift */; };
+		0B390AF829AE11C7005DFB16 /* AVCaptureDeviceInput+Camera.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF898FB325AFC15600CA35A8 /* AVCaptureDeviceInput+Camera.swift */; };
+		0B390AF929AE11C7005DFB16 /* AVCaptureDevice+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADD45BC24D55CE200955140 /* AVCaptureDevice+FrameRate.swift */; };
+		0B390AFA29AE11CC005DFB16 /* VideoProcessingChain.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFD1ED012564427700466FDA /* VideoProcessingChain.swift */; };
+		0B390AFB29AE11D2005DFB16 /* ActionClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D260298921EE00C8ED2B /* ActionClassifier+Singleton.swift */; };
+		0B390AFC29AE11D2005DFB16 /* ActionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D261298921EE00C8ED2B /* ActionClassifier.mlmodel */; };
+		0B390AFD29AE11D2005DFB16 /* ActionClassifier+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */; };
+		0B390AFE29AE11D2005DFB16 /* ActionClassifier+LabelCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25F298921EE00C8ED2B /* ActionClassifier+LabelCheck.swift */; };
+		0B390AFF29AE11D2005DFB16 /* ActionClassifier+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D262298921EE00C8ED2B /* ActionClassifier+Label.swift */; };
+		0B390B0029AE11D2005DFB16 /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */; };
+		0B390B0129AE11D2005DFB16 /* ActionClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */; };
+		0B390B0229AE11DE005DFB16 /* PerformanceReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF96FB1E256864520086C3AB /* PerformanceReporter.swift */; };
+		0B390B0329AE15F9005DFB16 /* pose_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8B9299E1A70004E3215 /* pose_generated.swift */; };
+		0B390B0429AE1601005DFB16 /* Pose+Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF20C7352578044800C9DB98 /* Pose+Landmark.swift */; };
+		0B390B0529AE1601005DFB16 /* Pose+Connection.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF20C7382578047E00C9DB98 /* Pose+Connection.swift */; };
+		0B390B0629AE1601005DFB16 /* Pose+Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF20C73B257805AE00C9DB98 /* Pose+Empty.swift */; };
+		0B390B0729AE1601005DFB16 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9EECA2571951800849AFB /* Pose.swift */; };
+		0B390B0B29AF4083005DFB16 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 0B390B0A29AF4083005DFB16 /* FlatBuffers */; };
+		0B390B0F29AF415B005DFB16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B390B0E29AF415B005DFB16 /* Info.plist */; };
 		0BE3D263298921EE00C8ED2B /* ActionClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */; };
 		0BE3D264298921EE00C8ED2B /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */; };
 		0BE3D265298921EE00C8ED2B /* ActionClassifier+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */; };
@@ -66,6 +91,14 @@
 		0B0BE8F5299F50F3004E3215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B0BE8F7299F50F3004E3215 /* MotionHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MotionHub.entitlements; sourceTree = "<group>"; };
 		0B0BE906299F529E004E3215 /* PeerConnection+Send.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeerConnection+Send.swift"; sourceTree = "<group>"; };
+		0B390AE229AE067A005DFB16 /* MController_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MController_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B390AE429AE067A005DFB16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0B390AE629AE067A005DFB16 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0B390AE929AE067A005DFB16 /* MController_MacOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MController_MacOS.xcdatamodel; sourceTree = "<group>"; };
+		0B390AEB29AE067B005DFB16 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0B390AEE29AE067B005DFB16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0B390AF029AE067B005DFB16 /* MController_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MController_MacOS.entitlements; sourceTree = "<group>"; };
+		0B390B0E29AF415B005DFB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+PredictAction.swift"; sourceTree = "<group>"; };
 		0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
 		0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+FrameRate.swift"; sourceTree = "<group>"; };
@@ -108,6 +141,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0B390ADF29AE067A005DFB16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B390B0B29AF4083005DFB16 /* FlatBuffers in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4A2D23AB22BB70E400494C55 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -147,6 +188,20 @@
 			path = MotionHub;
 			sourceTree = "<group>";
 		};
+		0B390AE329AE067A005DFB16 /* MController_MacOS */ = {
+			isa = PBXGroup;
+			children = (
+				0B390AE429AE067A005DFB16 /* AppDelegate.swift */,
+				0B390AE629AE067A005DFB16 /* ViewController.swift */,
+				0B390AEB29AE067B005DFB16 /* Assets.xcassets */,
+				0B390AED29AE067B005DFB16 /* Main.storyboard */,
+				0B390AF029AE067B005DFB16 /* MController_MacOS.entitlements */,
+				0B390AE829AE067A005DFB16 /* MController_MacOS.xcdatamodeld */,
+				0B390B0E29AF415B005DFB16 /* Info.plist */,
+			);
+			path = MController_MacOS;
+			sourceTree = "<group>";
+		};
 		0BE3D26A298A312300C8ED2B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +235,7 @@
 			children = (
 				4A2D23AE22BB70E400494C55 /* MController.app */,
 				0B0BE8E9299F50F1004E3215 /* MotionHub.app */,
+				0B390AE229AE067A005DFB16 /* MController_MacOS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +243,7 @@
 		4A2D23B022BB70E400494C55 /* MController */ = {
 			isa = PBXGroup;
 			children = (
+				0B390AE329AE067A005DFB16 /* MController_MacOS */,
 				4AFBF15222CC9A1300A4B11A /* Video Capture */,
 				DF141726255E0E2B007498A9 /* Video Processing Chain */,
 				50C8DA9323D13B6300734053 /* Action Classifier */,
@@ -314,6 +371,26 @@
 			productReference = 0B0BE8E9299F50F1004E3215 /* MotionHub.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0B390AE129AE067A005DFB16 /* MController_MacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B390AF129AE067B005DFB16 /* Build configuration list for PBXNativeTarget "MController_MacOS" */;
+			buildPhases = (
+				0B390ADE29AE067A005DFB16 /* Sources */,
+				0B390ADF29AE067A005DFB16 /* Frameworks */,
+				0B390AE029AE067A005DFB16 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MController_MacOS;
+			packageProductDependencies = (
+				0B390B0A29AF4083005DFB16 /* FlatBuffers */,
+			);
+			productName = MController_MacOS;
+			productReference = 0B390AE229AE067A005DFB16 /* MController_MacOS.app */;
+			productType = "com.apple.product-type.application";
+		};
 		4A2D23AD22BB70E400494C55 /* MController */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4A2D23C222BB70E500494C55 /* Build configuration list for PBXNativeTarget "MController" */;
@@ -349,6 +426,9 @@
 					0B0BE8E8299F50F1004E3215 = {
 						CreatedOnToolsVersion = 14.2;
 					};
+					0B390AE129AE067A005DFB16 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					4A2D23AD22BB70E400494C55 = {
 						CreatedOnToolsVersion = 11.0;
 						LastSwiftMigration = 1200;
@@ -370,6 +450,7 @@
 			targets = (
 				4A2D23AD22BB70E400494C55 /* MController */,
 				0B0BE8E8299F50F1004E3215 /* MotionHub */,
+				0B390AE129AE067A005DFB16 /* MController_MacOS */,
 			);
 		};
 /* End PBXProject section */
@@ -381,6 +462,16 @@
 			files = (
 				0B0BE8F3299F50F3004E3215 /* Assets.xcassets in Resources */,
 				0B0BE8F6299F50F3004E3215 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B390AE029AE067A005DFB16 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B390AEC29AE067B005DFB16 /* Assets.xcassets in Resources */,
+				0B390AEF29AE067B005DFB16 /* Main.storyboard in Resources */,
+				0B390B0F29AF415B005DFB16 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,6 +500,34 @@
 				0B0BE908299F532E004E3215 /* PeerListener.swift in Sources */,
 				0B0BE8FF299F51C0004E3215 /* NWParameters+InitWithPasscode.swift in Sources */,
 				0B0BE8FE299F51BC004E3215 /* ControlProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0B390ADE29AE067A005DFB16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B390B0629AE1601005DFB16 /* Pose+Empty.swift in Sources */,
+				0B390AF929AE11C7005DFB16 /* AVCaptureDevice+FrameRate.swift in Sources */,
+				0B390AFB29AE11D2005DFB16 /* ActionClassifier+Singleton.swift in Sources */,
+				0B390AF629AE11C7005DFB16 /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
+				0B390AFF29AE11D2005DFB16 /* ActionClassifier+Label.swift in Sources */,
+				0B390AF829AE11C7005DFB16 /* AVCaptureDeviceInput+Camera.swift in Sources */,
+				0B390AF729AE11C7005DFB16 /* VideoCapture.swift in Sources */,
+				0B390B0429AE1601005DFB16 /* Pose+Landmark.swift in Sources */,
+				0B390AFC29AE11D2005DFB16 /* ActionClassifier.mlmodel in Sources */,
+				0B390B0129AE11D2005DFB16 /* ActionClassifier+PredictAction.swift in Sources */,
+				0B390B0529AE1601005DFB16 /* Pose+Connection.swift in Sources */,
+				0B390AFA29AE11CC005DFB16 /* VideoProcessingChain.swift in Sources */,
+				0B390B0229AE11DE005DFB16 /* PerformanceReporter.swift in Sources */,
+				0B390AEA29AE067A005DFB16 /* MController_MacOS.xcdatamodeld in Sources */,
+				0B390AFE29AE11D2005DFB16 /* ActionClassifier+LabelCheck.swift in Sources */,
+				0B390B0729AE1601005DFB16 /* Pose.swift in Sources */,
+				0B390B0029AE11D2005DFB16 /* ActionPrediction.swift in Sources */,
+				0B390AE729AE067A005DFB16 /* ViewController.swift in Sources */,
+				0B390AE529AE067A005DFB16 /* AppDelegate.swift in Sources */,
+				0B390B0329AE15F9005DFB16 /* pose_generated.swift in Sources */,
+				0B390AFD29AE11D2005DFB16 /* ActionClassifier+FrameRate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -454,6 +573,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				0B0BE8F5299F50F3004E3215 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0B390AED29AE067B005DFB16 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0B390AEE29AE067B005DFB16 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -530,6 +657,70 @@
 				MACOSX_DEPLOYMENT_TARGET = 13.1;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = RongStudio.mcontrollr.MotionHub;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		0B390AF229AE067B005DFB16 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = MController/MController_MacOS/MController_MacOS.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5M2VU5836;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use camera to capture movement";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Apple. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "RongStudio.mcontrollr.MController-MacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		0B390AF329AE067B005DFB16 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_ENTITLEMENTS = MController/MController_MacOS/MController_MacOS.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Y5M2VU5836;
+				ENABLE_HARDENED_RUNTIME = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Use camera to capture movement";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Apple. All rights reserved.";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.1;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "RongStudio.mcontrollr.MController-MacOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -678,6 +869,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited)";
@@ -706,6 +900,9 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_VERSION = 5.0;
 				SYSTEM_FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -720,6 +917,15 @@
 			buildConfigurations = (
 				0B0BE8F9299F50F3004E3215 /* Debug */,
 				0B0BE8FA299F50F3004E3215 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0B390AF129AE067B005DFB16 /* Build configuration list for PBXNativeTarget "MController_MacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0B390AF229AE067B005DFB16 /* Debug */,
+				0B390AF329AE067B005DFB16 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -753,6 +959,10 @@
 			isa = XCSwiftPackageProductDependency;
 			productName = FlatBuffers;
 		};
+		0B390B0A29AF4083005DFB16 /* FlatBuffers */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FlatBuffers;
+		};
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
@@ -763,6 +973,16 @@
 			);
 			currentVersion = 0B0BE8F0299F50F2004E3215 /* MotionHub.xcdatamodel */;
 			path = MotionHub.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		0B390AE829AE067A005DFB16 /* MController_MacOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0B390AE929AE067A005DFB16 /* MController_MacOS.xcdatamodel */,
+			);
+			currentVersion = 0B390AE929AE067A005DFB16 /* MController_MacOS.xcdatamodel */;
+			path = MController_MacOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

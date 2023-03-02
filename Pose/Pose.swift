@@ -5,8 +5,9 @@ Abstract:
 A `Pose` is a collection of "landmarks" and connections between select landmarks.
  Each `Pose` can draw itself as a wireframe to a Core Graphics context.
 */
-
+#if !os(OSX)
 import UIKit
+#endif
 import Vision
 import FlatBuffers
 

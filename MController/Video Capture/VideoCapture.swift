@@ -5,8 +5,9 @@ Abstract:
 Convenience class that configures the video capture session and
  creates a (video) frame publisher.
 */
-
+#if !os(OSX)
 import UIKit
+#endif
 import Combine
 import AVFoundation
 
@@ -93,6 +94,7 @@ class VideoCapture: NSObject {
     }
 
     /// Adjusts the video orientation to match the device's orientation.
+#if os(iOS)
     func updateDeviceOrientation() {
         // Retrieve the device's orientation from UIKit.
         let currentPhysicalOrientation = UIDevice.current.orientation
@@ -118,7 +120,7 @@ class VideoCapture: NSObject {
             orientation = .portrait
         }
     }
-
+#endif
     private func enableCaptureSession() {
         if !captureSession.isRunning { captureSession.startRunning() }
     }
@@ -242,7 +244,7 @@ extension VideoCapture {
         if connection.isVideoMirroringSupported {
             connection.isVideoMirrored = horizontalFlip
         }
-
+        #if !os(OSX)
         if connection.isVideoStabilizationSupported {
             if videoStabilizationEnabled {
                 connection.preferredVideoStabilizationMode = .standard
@@ -250,6 +252,7 @@ extension VideoCapture {
                 connection.preferredVideoStabilizationMode = .off
             }
         }
+        #endif
 
         // Discard newer frames if the app is busy with an earlier frame.
         output.alwaysDiscardsLateVideoFrames = true
