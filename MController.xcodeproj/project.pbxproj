@@ -48,6 +48,8 @@
 		0B390B0729AE1601005DFB16 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9EECA2571951800849AFB /* Pose.swift */; };
 		0B390B0B29AF4083005DFB16 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 0B390B0A29AF4083005DFB16 /* FlatBuffers */; };
 		0B390B0F29AF415B005DFB16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B390B0E29AF415B005DFB16 /* Info.plist */; };
+		0B390B1129B0AF9B005DFB16 /* VirtualHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390B1029B0AF9B005DFB16 /* VirtualHID.swift */; };
+		0B390B1229B0AF9B005DFB16 /* VirtualHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390B1029B0AF9B005DFB16 /* VirtualHID.swift */; };
 		0BE3D263298921EE00C8ED2B /* ActionClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */; };
 		0BE3D264298921EE00C8ED2B /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */; };
 		0BE3D265298921EE00C8ED2B /* ActionClassifier+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */; };
@@ -99,6 +101,7 @@
 		0B390AEE29AE067B005DFB16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B390AF029AE067B005DFB16 /* MController_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MController_MacOS.entitlements; sourceTree = "<group>"; };
 		0B390B0E29AF415B005DFB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0B390B1029B0AF9B005DFB16 /* VirtualHID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualHID.swift; sourceTree = "<group>"; };
 		0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+PredictAction.swift"; sourceTree = "<group>"; };
 		0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
 		0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+FrameRate.swift"; sourceTree = "<group>"; };
@@ -184,6 +187,7 @@
 				0B0BE8F4299F50F3004E3215 /* Main.storyboard */,
 				0B0BE8F7299F50F3004E3215 /* MotionHub.entitlements */,
 				0B0BE8EF299F50F2004E3215 /* MotionHub.xcdatamodeld */,
+				0B390B1029B0AF9B005DFB16 /* VirtualHID.swift */,
 			);
 			path = MotionHub;
 			sourceTree = "<group>";
@@ -494,6 +498,7 @@
 			files = (
 				0B0BE8F1299F50F2004E3215 /* MotionHub.xcdatamodeld in Sources */,
 				0B0BE904299F51CC004E3215 /* pose_generated.swift in Sources */,
+				0B390B1129B0AF9B005DFB16 /* VirtualHID.swift in Sources */,
 				0B0BE8EE299F50F2004E3215 /* ViewController.swift in Sources */,
 				0B0BE8EC299F50F2004E3215 /* AppDelegate.swift in Sources */,
 				0B0BE8FD299F51B9004E3215 /* PeerConnection.swift in Sources */,
@@ -524,6 +529,7 @@
 				0B390AFE29AE11D2005DFB16 /* ActionClassifier+LabelCheck.swift in Sources */,
 				0B390B0729AE1601005DFB16 /* Pose.swift in Sources */,
 				0B390B0029AE11D2005DFB16 /* ActionPrediction.swift in Sources */,
+				0B390B1229B0AF9B005DFB16 /* VirtualHID.swift in Sources */,
 				0B390AE729AE067A005DFB16 /* ViewController.swift in Sources */,
 				0B390AE529AE067A005DFB16 /* AppDelegate.swift in Sources */,
 				0B390B0329AE15F9005DFB16 /* pose_generated.swift in Sources */,

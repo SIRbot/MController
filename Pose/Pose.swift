@@ -30,7 +30,9 @@ struct Pose {
     let area: CGFloat
     
     /// The corresponding flatbuffer data of this Pose
-    var poseData: Data!
+    var poseData: Data{
+        get {return poseData(landmarks)}
+    }
 
     /// Creates a `Pose` for each human body pose observation in the array.
     /// - Parameter observations: An array of human body pose observations.
@@ -68,7 +70,7 @@ struct Pose {
         buildConnections()
         
         // convert to flatbuffer
-        poseData = Pose.poseData(landmarks)
+//        poseData = Pose.poseData(landmarks)
     }
 
     /// Draws all the valid connections and landmarks of the wireframe.
@@ -167,7 +169,7 @@ extension Pose {
         return deltaX * deltaY
     }
     
-    static func poseData(_ landmarks: [Landmark]) -> Data {
+    func poseData(_ landmarks: [Landmark]) -> Data {
         var builder = FlatBufferBuilder(initialSize: 1024)
         
         var landmarksData : [Offset] = []

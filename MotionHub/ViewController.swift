@@ -8,7 +8,7 @@
 
 import Cocoa
 import Network
-import AppKit
+//import AppKit
 import FlatBuffers
 
 class ViewController: NSViewController, NSWindowDelegate {
@@ -18,28 +18,7 @@ class ViewController: NSViewController, NSWindowDelegate {
     var results: [NWBrowser.Result] = [NWBrowser.Result]()
     var name: String = "Default"
     var passcode: String = ""
-    
-    struct AvatarState{
-        var walk : Bool = false
-        var run : Bool = false
-        var jump : Bool = false
-        var turnLeft : Bool = false
-        var turnRight : Bool = false
-    }
-    
-    var avatarState = AvatarState()
-    
-    let upKeyCode: CGKeyCode = 126
-    let downKeyCode: CGKeyCode = 125
-    let rightKeyCode: CGKeyCode = 124
-    let leftKeyCode: CGKeyCode = 123
-    let wKeyCode: CGKeyCode = 13
-    let sKeyCode: CGKeyCode = 1
-    let aKeyCode: CGKeyCode = 0
-    let dKeyCode: CGKeyCode = 2
-    let spaceKeyCode: CGKeyCode = 49
-    let oKeyCode: CGKeyCode = 88
-    let uKeyCode: CGKeyCode = 86 // 3
+    let virtualHID: VirtualHID = VirtualHID()
     
     // Generate a new random passcode when the app starts hosting games.
     func generatePasscode() -> String {
@@ -107,10 +86,8 @@ extension ViewController: PeerConnectionDelegate {
     }
     
     func handlePose(_ content: Data, _ message: NWProtocolFramer.Message) {
-        // Handle the peer selecting a character family.
-        //        if let pose = String(data: content, encoding: .unicode) {
-        //
-        //        }
+        
+        //Decode from flatbuffer
         let buf = ByteBuffer(data: content)
         let pose = MController_Pose.init(buf, o: Int32(buf.read(def: UOffset.self, position: buf.reader)) + Int32(buf.reader))
         
@@ -123,59 +100,21 @@ extension ViewController: PeerConnectionDelegate {
             joints.append((landmark?.name)!)
             locations.append(CGPoint(x: CGFloat((landmark?.x)!), y: CGFloat((landmark?.x)!)))
         }
-        let zippedPairs = zip(joints, locations)
-        let jointLocations = Dictionary(uniqueKeysWithValues: zippedPairs)
-//        print("location of right_ear_joint: %f, %f", jointLocations["right_ear_joint"]?.x ?? 0, jointLocations["right_ear_joint"]?.y ?? 0)
+        
+        //construct a name-landmark dict
+//        let zippedPairs = zip(joints, locations)
+//        let jointLocations = Dictionary(uniqueKeysWithValues: zippedPairs)
+        
         if joints.contains("right_ear_joint") && !joints.contains("left_ear_joint"){
-            
-//            moveRight()
-//            NSLog("current mouse x: %@ y: %@", String(Double(NSEvent.mouseLocation.x)), String(Double(NSEvent.mouseLocation.y)))
-//            moveRight()
-//            NSLog("moved mouse x: %@ y: %@", String(Double(NSEvent.mouseLocation.x)), String(Double(NSEvent.mouseLocation.y)))
-            if !self.avatarState.turnRight{
-                if self.avatarState.turnLeft{
-                    keyboardUp(self.uKeyCode)
-//                    self.uKeyU?.post(tap: self.tapLoc)
-                }
-//                self.oKeyD?.post(tap: self.tapLoc)
-                keyboardDown(self.oKeyCode)
-                self.avatarState.turnRight = true
-                self.avatarState.turnLeft = false
-                print("Turn Right")
-            }
+            virtualHID.faceRight()
             
         }else if !joints.contains("right_ear_joint") && joints.contains("left_ear_joint"){
-            
-            
-            if !self.avatarState.turnLeft{
-                if self.avatarState.turnRight{
-                    keyboardUp(self.oKeyCode)
-                }
-//                self.uKeyD?.post(tap: self.tapLoc)
-                keyboardDown(self.uKeyCode)
-                self.avatarState.turnRight = false
-                self.avatarState.turnLeft = true
-                print("Turn Left")
-            }
+            virtualHID.faceLeft()
             
         }else{
-//            print("face center or unknown")
-            if self.avatarState.turnRight{
-                keyboardUp(self.oKeyCode)
-                self.avatarState.turnRight = false
-                print("Turn Center")
-            }
-            
-            if self.avatarState.turnLeft{
-                keyboardUp(self.uKeyCode)
-                self.avatarState.turnLeft = false
-                print("Turn Center")
-            }
+            virtualHID.faceCenter()
             
         }
-        
-//        var pose:MController_Pose = try?getCheckedRoot(byteBuffer: &buf)
-//        if let poses = Pose
     }
     
     func handleAction(_ content: Data, _ message: NWProtocolFramer.Message) {
@@ -184,222 +123,30 @@ extension ViewController: PeerConnectionDelegate {
             NSLog("recv action: " + action)
             switch action {
 //            case "squat":
-//                NSLog("press down")
-//                if self.avatarState.jump{
-//                    keyboardUp(self.spaceKeyCode)
-//                }
-//                self.downKeyD?.post(tap: self.tapLoc)
-//                self.downKeyU?.post(tap: self.tapLoc)
 //                break
             case "stand":
-                NSLog("do nothing")
-                if self.avatarState.jump{
-                    keyboardUp(self.spaceKeyCode)
-                }
-                
-                if self.avatarState.walk{
-                    keyboardUp(self.wKeyCode)
-                }
-                
-                if self.avatarState.run{
-                    // right buttom up
-                    rightMouseUp()
-                    keyboardUp(self.wKeyCode)
-                }
-                
-                self.avatarState.walk = false
-                self.avatarState.jump = false
-                self.avatarState.run = false
+                virtualHID.stand()
                 
                 break
-                
             case "jump":
-                NSLog("press space")
-//                self.spaceKeyD?.post(tap: self.tapLoc)
-//                self.spaceKeyU?.post(tap: self.tapLoc)
-                
-                if !self.avatarState.jump{
-                    keyboardDown(self.spaceKeyCode)
-                }
-                
-                self.avatarState.jump = true
+                virtualHID.jump()
                 
                 break
             case "walk":
-                NSLog("press up")
-                if self.avatarState.jump{
-                    keyboardUp(self.spaceKeyCode)
-                }
-                
-                if self.avatarState.run{
-                    // right buttom up
-                    rightMouseUp()
-                } else if !avatarState.walk{
-                    keyboardDown(self.wKeyCode)
-                }
-                
-                self.avatarState.walk = true
-                self.avatarState.jump = false
-                self.avatarState.run = false
-//                self.wKeyD?.post(tap: self.tapLoc)
-//                self.upKeyU?.post(tap: self.tapLoc)
+                virtualHID.walk()
                 
                 break
             case "run":
-                NSLog("run")
-                if self.avatarState.jump{
-                    keyboardUp(self.spaceKeyCode)
-                }
-                
-                if self.avatarState.run{
-                    break
-                }
-                
-                if self.avatarState.walk{
-                    // right buttom down
-                    rightMouseDown()
-                } else {
-                    keyboardDown(self.wKeyCode)
-                }
-                self.avatarState.walk = false
-                self.avatarState.jump = false
-                self.avatarState.run = true
-//                self.upKeyD?.flags = CGEventFlags.maskShift
-//                self.wKeyD?.post(tap: self.tapLoc)
-//                self.shiftKeyD?.post(tap: self.tapLoc)
-//                self.upKeyU?.post(tap: self.tapLoc)
+                virtualHID.run()
                 
                 break
             default:
                 print("Unknown Action")
-                if self.avatarState.jump{
-                    keyboardUp(self.spaceKeyCode)
-                }
-                
-                if self.avatarState.walk{
-                    keyboardUp(self.wKeyCode)
-                }
-                
-                if self.avatarState.run{
-                    // right buttom up
-                    rightMouseUp()
-                    keyboardUp(self.wKeyCode)
-                }
-                
-                self.avatarState.walk = false
-                self.avatarState.jump = false
-                self.avatarState.run = false
+                virtualHID.stand()
                 
                 break
             }
         }
-    }
-    
-    func moveLeft(){
-        let currentPos = NSEvent.mouseLocation
-        let leftPose = CGPoint(x: currentPos.x - 1.0, y: CGFloat(1080)-currentPos.y)
-        mouseMove(onPoint: leftPose)
-    }
-    
-    func moveRight(){
-        let currentPos = NSEvent.mouseLocation
-        let rightPose = CGPoint(x: currentPos.x + 1.0, y: CGFloat(1080)-currentPos.y)
-        mouseMove(onPoint: rightPose)
-    }
-    
-    func moveUp(){
-        let currentPos = NSEvent.mouseLocation
-        let upPose = CGPoint(x: currentPos.x, y: CGFloat(1080) - (currentPos.y + 1.0))
-        mouseMove(onPoint: upPose)
-    }
-    
-    func mouseMove(onPoint point: CGPoint) {
-//        CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        guard let moveEvent = CGEvent(mouseEventSource: source, mouseType: .mouseMoved, mouseCursorPosition: point, mouseButton: .left) else {
-            return
-        }
-        moveEvent.post(tap: CGEventTapLocation.cghidEventTap)
-    }
-    
-    func rightMouseDown(){
-        let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        var mousePos = NSEvent.mouseLocation
-        mousePos.y = CGFloat(1080) - mousePos.y
-        guard let moveEvent = CGEvent(mouseEventSource: source, mouseType: .rightMouseDown, mouseCursorPosition: mousePos, mouseButton: .right) else {
-            return
-        }
-        moveEvent.post(tap: CGEventTapLocation.cghidEventTap)
-        
-    }
-    
-    func rightMouseUp(){
-        let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        var mousePos = NSEvent.mouseLocation
-        mousePos.y = CGFloat(1080) - mousePos.y
-        guard let moveEvent = CGEvent(mouseEventSource: source, mouseType: .rightMouseUp, mouseCursorPosition: mousePos, mouseButton: .right) else {
-            return
-        }
-        moveEvent.post(tap: CGEventTapLocation.cghidEventTap)
-        
-    }
-    
-    func leftMouseDown(){
-        let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        var mousePos = NSEvent.mouseLocation
-        mousePos.y = CGFloat(1080) - mousePos.y
-        guard let moveEvent = CGEvent(mouseEventSource: source, mouseType: .leftMouseDown, mouseCursorPosition: mousePos, mouseButton: .left) else {
-            return
-        }
-        moveEvent.post(tap: CGEventTapLocation.cghidEventTap)
-        
-    }
-    
-    func leftMouseUp(){
-        let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        var mousePos = NSEvent.mouseLocation
-        mousePos.y = CGFloat(1080) - mousePos.y
-        guard let moveEvent = CGEvent(mouseEventSource: source, mouseType: .leftMouseUp, mouseCursorPosition: mousePos, mouseButton: .left) else {
-            return
-        }
-        moveEvent.post(tap: CGEventTapLocation.cghidEventTap)
-        
-    }
-    
-    func leftMouseClicked(){
-        leftMouseDown()
-        leftMouseUp()
-    }
-    
-    func rightMouseClicked(){
-        rightMouseDown()
-        rightMouseUp()
-    }
-    
-    func keyboardDown(_ keycode: CGKeyCode){
-        keyboardDown(keycode, CGEventFlags.maskNonCoalesced)
-    }
-    
-    func keyboardUp(_ keycode: CGKeyCode){
-        keyboardUp(keycode, CGEventFlags.maskNonCoalesced)
-    }
-    
-    func keyboardDown(_ keycode:CGKeyCode, _ flags:CGEventFlags){
-        let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        guard let keyboardEvent = CGEvent(keyboardEventSource: source, virtualKey: keycode, keyDown: true) else{
-            return
-        }
-        keyboardEvent.flags = flags
-        keyboardEvent.post(tap: CGEventTapLocation.cghidEventTap)
-    }
-    
-    func keyboardUp(_ keycode:CGKeyCode, _ flags:CGEventFlags){
-        let source = CGEventSource(stateID: CGEventSourceStateID.hidSystemState)
-        guard let keyboardEvent = CGEvent(keyboardEventSource: source, virtualKey: keycode, keyDown: false) else{
-            return
-        }
-        keyboardEvent.flags = flags
-        keyboardEvent.post(tap: CGEventTapLocation.cghidEventTap)
     }
 }
 

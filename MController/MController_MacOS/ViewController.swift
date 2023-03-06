@@ -8,6 +8,7 @@
 
 import Cocoa
 import Vision
+import FlatBuffers
 
 class ViewController: NSViewController {
     
@@ -36,14 +37,19 @@ class ViewController: NSViewController {
     /// Maintains the aggregate time for each action the model predicts.
     /// - Tag: actionFrameCounts
     var actionFrameCounts = [String: Int]()
+    
+    private var virtualHID: VirtualHID = VirtualHID()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Round the corners of the stack and button views.
+        // Round the corners of the stack views.
         let views = [labelStack]
         views.forEach { view in
+            view?.wantsLayer = true
             view?.layer?.cornerRadius = 10
+            view?.layer?.backgroundColor = NSColor.black.withAlphaComponent(0.4).cgColor
+            view?.isHidden = false
         }
 
         // Set the view controller as the video-processing chain's delegate.
@@ -98,9 +104,12 @@ extension ViewController: VideoProcessingChainDelegate {
 //            sharedConnection?.sendAction(actionPrediction.label)
 //            print("send action: " + actionPrediction.label)
         }
-
+        
         // Present the prediction in the UI.
         updateUILabelsWithPrediction(actionPrediction)
+        
+        guard let data = actionPrediction.label.data(using: .unicode) else {return}
+        handleAction(data)
     }
 
     /// Receives a frame and any poses in that frame.
@@ -116,6 +125,12 @@ extension ViewController: VideoProcessingChainDelegate {
         DispatchQueue.global(qos: .userInteractive).async {
             // Draw the poses onto the frame.
             self.drawPoses(poses, onto: frame)
+        }
+        
+        guard let poses:[Pose] = poses else {return}
+        
+        for pose in poses{
+            handlePose(pose.poseData)
         }
     }
 }
@@ -180,6 +195,7 @@ extension ViewController {
         // the context's transform matrix to the identity.
 //        cgContext.concatenate(inverse)
         
+        //Get the mirror transform matrix
         let mirror = CGAffineTransform(a: -1, b: 0, c: 0, d: 1, tx: frameSize.width, ty: 0)
         
         cgContext.concatenate(mirror)
@@ -208,5 +224,70 @@ extension ViewController {
         DispatchQueue.main.async { self.imageView.image = NSImage(cgImage: image, size: .zero) }
 
     }
+    
+    private func handlePose(_ content: Data) {
+        
+        //Decode from flatbuffer
+        let buf = ByteBuffer(data: content)
+        let pose = MController_Pose.init(buf, o: Int32(buf.read(def: UOffset.self, position: buf.reader)) + Int32(buf.reader))
+        
+        var joints :[String] = []
+        var locations : [CGPoint] = []
+
+        for i in 0..<pose.landmarksCount{
+            let landmark = pose.landmarks(at: i)
+//            print("landmark["+String(i)+"]: " + (landmark?.name)!)
+            joints.append((landmark?.name)!)
+            locations.append(CGPoint(x: CGFloat((landmark?.x)!), y: CGFloat((landmark?.x)!)))
+        }
+        
+        //construct a name-landmark dict
+//        let zippedPairs = zip(joints, locations)
+//        let jointLocations = Dictionary(uniqueKeysWithValues: zippedPairs)
+        
+        if joints.contains("right_ear_joint") && !joints.contains("left_ear_joint"){
+            virtualHID.faceLeft()
+            
+        }else if !joints.contains("right_ear_joint") && joints.contains("left_ear_joint"){
+            virtualHID.faceRight()
+            
+        }else{
+            virtualHID.faceCenter()
+            
+        }
+    }
+    
+    private func handleAction(_ content: Data) {
+        // Handle the peer placing a character on a given location.
+        guard let action = String(data: content, encoding: .unicode) else { return}
+        NSLog("recv action: " + action)
+        switch action {
+//            case "squat":
+//                break
+        case "stand":
+            virtualHID.stand()
+            
+            break
+        case "jump":
+            virtualHID.jump()
+            
+            break
+        case "walk":
+            virtualHID.walk()
+            
+            break
+        case "run":
+            virtualHID.run()
+            
+            break
+        default:
+            print("Unknown Action")
+            virtualHID.stand()
+            
+            break
+        }
+    }
+    
+    
 }
 
