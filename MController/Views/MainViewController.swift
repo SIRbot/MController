@@ -7,9 +7,11 @@ The app's main view controller.
 
 import UIKit
 import Vision
+import CoreBluetooth
+import FlatBuffers
 
 @available(iOS 14.0, *)
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, BLEPeripheralProtocol {
     /// The full-screen view that presents the pose on top of the video frames.
     @IBOutlet var imageView: UIImageView!
 
@@ -28,6 +30,8 @@ class MainViewController: UIViewController {
     /// The button users tap to toggle between the front- and back-facing
     /// cameras.
     @IBOutlet weak var cameraButton: UIButton!
+    
+    @IBOutlet weak var switchPeripheral: UISwitch!
 
     /// Captures the frames from the camera and creates a frame publisher.
     var videoCapture: VideoCapture!
@@ -43,6 +47,46 @@ class MainViewController: UIViewController {
     /// Maintains the aggregate time for each action the model predicts.
     /// - Tag: actionFrameCounts
     var actionFrameCounts = [String: Int]()
+    
+//    var ble: BLEPeripheralManager?
+    var virtualHID: BLE_VirtualHID = BLE_VirtualHID()
+    
+    // Activate / disActivate the peripheral
+    @IBAction func switchPeripheralOnOff(_ sender: AnyObject) {
+
+        if self.switchPeripheral.isOn {
+            
+//            logToScreen("starting peripheral")
+
+            virtualHID.ble = BLEPeripheralManager()
+            virtualHID.ble?.delegate = self
+            virtualHID.ble!.startBLEPeripheral()
+//            timerOn = true
+
+//            Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { [self] timer in
+//                print("Timer fired!")
+//
+//                if !self.timerOn {
+//                    timer.invalidate()
+//                }
+//            }
+        }
+        else {
+            print("stopping Peripheral")
+            virtualHID.ble!.stopBLEPeripheral()
+//            timerOn = false
+//            logTextView.text = ""
+        }
+    
+    }
+    
+    func logToScreen(_ text: String) {
+        print(text)
+        
+//        var str = logTextView.text + "\n"
+//        str += text
+//        logTextView.text = str
+    }
 }
 
 // MARK: - View Controller Events
@@ -130,12 +174,15 @@ extension MainViewController: VideoProcessingChainDelegate {
         if actionPrediction.isModelLabel {
             // Update the total number of frames for this action.
 //            addFrameCount(frameCount, to: actionPrediction.label)
-            sharedConnection?.sendAction(actionPrediction.label)
+//            sharedConnection?.sendAction(actionPrediction.label)
             print("send action: " + actionPrediction.label)
         }
 
         // Present the prediction in the UI.
         updateUILabelsWithPrediction(actionPrediction)
+        
+        guard let data = actionPrediction.label.data(using: .unicode) else {return}
+        handleAction(data)
     }
 
     /// Receives a frame and any poses in that frame.
@@ -146,11 +193,17 @@ extension MainViewController: VideoProcessingChainDelegate {
     func videoProcessingChain(_ chain: VideoProcessingChain,
                               didDetect poses: [Pose]?,
                               in frame: CGImage) {
-        sharedConnection?.sendPoses(poses!)
+//        sharedConnection?.sendPoses(poses!)
         // Render the poses on a different queue than pose publisher.
         DispatchQueue.global(qos: .userInteractive).async {
             // Draw the poses onto the frame.
             self.drawPoses(poses, onto: frame)
+        }
+        
+        guard let poses:[Pose] = poses else {return}
+        
+        for pose in poses{
+            handlePose(pose.poseData)
         }
     }
 }
@@ -232,5 +285,67 @@ extension MainViewController {
 
         // Update the UI's full-screen image view on the main thread.
         DispatchQueue.main.async { self.imageView.image = frameWithPosesRendering }
+    }
+    
+    private func handlePose(_ content: Data) {
+        
+        //Decode from flatbuffer
+        let buf = ByteBuffer(data: content)
+        let pose = MController_Pose.init(buf, o: Int32(buf.read(def: UOffset.self, position: buf.reader)) + Int32(buf.reader))
+        
+        var joints :[String] = []
+        var locations : [CGPoint] = []
+
+        for i in 0..<pose.landmarksCount{
+            let landmark = pose.landmarks(at: i)
+//            print("landmark["+String(i)+"]: " + (landmark?.name)!)
+            joints.append((landmark?.name)!)
+            locations.append(CGPoint(x: CGFloat((landmark?.x)!), y: CGFloat((landmark?.x)!)))
+        }
+        
+        //construct a name-landmark dict
+//        let zippedPairs = zip(joints, locations)
+//        let jointLocations = Dictionary(uniqueKeysWithValues: zippedPairs)
+        
+        if joints.contains("right_ear_joint") && !joints.contains("left_ear_joint"){
+            virtualHID.faceLeft()
+            
+        }else if !joints.contains("right_ear_joint") && joints.contains("left_ear_joint"){
+            virtualHID.faceRight()
+            
+        }else{
+            virtualHID.faceCenter()
+        }
+    }
+    
+    private func handleAction(_ content: Data) {
+        // Handle the peer placing a character on a given location.
+        guard let action = String(data: content, encoding: .unicode) else { return}
+        NSLog("recv action: " + action)
+        switch action {
+//            case "squat":
+//                break
+        case "stand":
+            virtualHID.stand()
+            
+            break
+        case "jump":
+            virtualHID.jump()
+            
+            break
+        case "walk":
+            virtualHID.walk()
+            
+            break
+        case "run":
+            virtualHID.run()
+            
+            break
+        default:
+            print("Unknown Action")
+            virtualHID.stand()
+            
+            break
+        }
     }
 }

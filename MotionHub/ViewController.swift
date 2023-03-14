@@ -8,7 +8,6 @@
 
 import Cocoa
 import Network
-//import AppKit
 import FlatBuffers
 
 class ViewController: NSViewController, NSWindowDelegate {

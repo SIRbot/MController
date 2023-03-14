@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B0BE8A729938972004E3215 /* PeerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8A529938972004E3215 /* PeerListViewController.swift */; };
-		0B0BE8A829938972004E3215 /* PasscodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8A629938972004E3215 /* PasscodeViewController.swift */; };
 		0B0BE8BA299E1A70004E3215 /* pose_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8B9299E1A70004E3215 /* pose_generated.swift */; };
 		0B0BE8C1299E1E00004E3215 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0BE8C0299E1E00004E3215 /* FlatBuffers */; };
 		0B0BE8EC299F50F2004E3215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8EB299F50F2004E3215 /* AppDelegate.swift */; };
@@ -21,7 +19,6 @@
 		0B0BE8FE299F51BC004E3215 /* ControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26D298A312300C8ED2B /* ControlProtocol.swift */; };
 		0B0BE8FF299F51C0004E3215 /* NWParameters+InitWithPasscode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26E298A312300C8ED2B /* NWParameters+InitWithPasscode.swift */; };
 		0B0BE904299F51CC004E3215 /* pose_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8B9299E1A70004E3215 /* pose_generated.swift */; };
-		0B0BE907299F529E004E3215 /* PeerConnection+Send.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE906299F529E004E3215 /* PeerConnection+Send.swift */; };
 		0B0BE908299F532E004E3215 /* PeerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26C298A312300C8ED2B /* PeerListener.swift */; };
 		0B390AE529AE067A005DFB16 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390AE429AE067A005DFB16 /* AppDelegate.swift */; };
 		0B390AE729AE067A005DFB16 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390AE629AE067A005DFB16 /* ViewController.swift */; };
@@ -57,11 +54,11 @@
 		0BE3D267298921EE00C8ED2B /* ActionClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D260298921EE00C8ED2B /* ActionClassifier+Singleton.swift */; };
 		0BE3D268298921EE00C8ED2B /* ActionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D261298921EE00C8ED2B /* ActionClassifier.mlmodel */; };
 		0BE3D269298921EE00C8ED2B /* ActionClassifier+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D262298921EE00C8ED2B /* ActionClassifier+Label.swift */; };
-		0BE3D270298A312300C8ED2B /* PeerConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26B298A312300C8ED2B /* PeerConnection.swift */; };
-		0BE3D271298A312300C8ED2B /* PeerListener.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26C298A312300C8ED2B /* PeerListener.swift */; };
-		0BE3D272298A312300C8ED2B /* ControlProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26D298A312300C8ED2B /* ControlProtocol.swift */; };
-		0BE3D273298A312300C8ED2B /* NWParameters+InitWithPasscode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26E298A312300C8ED2B /* NWParameters+InitWithPasscode.swift */; };
-		0BE3D274298A312300C8ED2B /* PeerBrowser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D26F298A312300C8ED2B /* PeerBrowser.swift */; };
+		0BFE959529B89142004287B9 /* BLE_PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959229B89142004287B9 /* BLE_PeripheralManager.swift */; };
+		0BFE959629B89142004287B9 /* BLE_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959329B89142004287B9 /* BLE_Protocol.swift */; };
+		0BFE959729B89142004287B9 /* BLE_Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959429B89142004287B9 /* BLE_Tools.swift */; };
+		0BFE959929B896E2004287B9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFE959829B896E2004287B9 /* CoreBluetooth.framework */; };
+		0BFE959B29B8BE11004287B9 /* BLE_VirtualHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959A29B8BE11004287B9 /* BLE_VirtualHID.swift */; };
 		4A2D23B222BB70E400494C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D23B122BB70E400494C55 /* AppDelegate.swift */; };
 		4A2D23B622BB70E400494C55 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D23B522BB70E400494C55 /* MainViewController.swift */; };
 		4A2D23B922BB70E400494C55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D23B722BB70E400494C55 /* Main.storyboard */; };
@@ -114,6 +111,11 @@
 		0BE3D26D298A312300C8ED2B /* ControlProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlProtocol.swift; sourceTree = "<group>"; };
 		0BE3D26E298A312300C8ED2B /* NWParameters+InitWithPasscode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NWParameters+InitWithPasscode.swift"; sourceTree = "<group>"; };
 		0BE3D26F298A312300C8ED2B /* PeerBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerBrowser.swift; sourceTree = "<group>"; };
+		0BFE959229B89142004287B9 /* BLE_PeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_PeripheralManager.swift; sourceTree = "<group>"; };
+		0BFE959329B89142004287B9 /* BLE_Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Protocol.swift; sourceTree = "<group>"; };
+		0BFE959429B89142004287B9 /* BLE_Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Tools.swift; sourceTree = "<group>"; };
+		0BFE959829B896E2004287B9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
+		0BFE959A29B8BE11004287B9 /* BLE_VirtualHID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE_VirtualHID.swift; sourceTree = "<group>"; };
 		4A2D23AE22BB70E400494C55 /* MController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2D23B122BB70E400494C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A2D23B522BB70E400494C55 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BFE959929B896E2004287B9 /* CoreBluetooth.framework in Frameworks */,
 				0B0BE8C1299E1E00004E3215 /* FlatBuffers in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,6 +177,7 @@
 		0B0BE8BF299E1E00004E3215 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0BFE959829B896E2004287B9 /* CoreBluetooth.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -219,9 +223,21 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		0BFE959129B89142004287B9 /* BLE */ = {
+			isa = PBXGroup;
+			children = (
+				0BFE959229B89142004287B9 /* BLE_PeripheralManager.swift */,
+				0BFE959329B89142004287B9 /* BLE_Protocol.swift */,
+				0BFE959429B89142004287B9 /* BLE_Tools.swift */,
+				0BFE959A29B8BE11004287B9 /* BLE_VirtualHID.swift */,
+			);
+			path = BLE;
+			sourceTree = "<group>";
+		};
 		4A2D23A522BB70E400494C55 = {
 			isa = PBXGroup;
 			children = (
+				0BFE959129B89142004287B9 /* BLE */,
 				0B0BE8BB299E1C6D004E3215 /* Packages */,
 				57C02DF057C02B4000000001 /* README.md */,
 				DF96FB2D256880390086C3AB /* Pose */,
@@ -541,34 +557,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BE3D273298A312300C8ED2B /* NWParameters+InitWithPasscode.swift in Sources */,
 				0BE3D265298921EE00C8ED2B /* ActionClassifier+FrameRate.swift in Sources */,
 				DF96FB1F256864520086C3AB /* PerformanceReporter.swift in Sources */,
 				DF898FB425AFC15700CA35A8 /* AVCaptureDeviceInput+Camera.swift in Sources */,
-				0BE3D274298A312300C8ED2B /* PeerBrowser.swift in Sources */,
-				0B0BE907299F529E004E3215 /* PeerConnection+Send.swift in Sources */,
+				0BFE959529B89142004287B9 /* BLE_PeripheralManager.swift in Sources */,
 				0BE3D266298921EE00C8ED2B /* ActionClassifier+LabelCheck.swift in Sources */,
+				0BFE959629B89142004287B9 /* BLE_Protocol.swift in Sources */,
 				0BE3D263298921EE00C8ED2B /* ActionClassifier+PredictAction.swift in Sources */,
 				0BE3D269298921EE00C8ED2B /* ActionClassifier+Label.swift in Sources */,
 				4AA5C4B822BB9CC200277977 /* VideoCapture.swift in Sources */,
 				0BE3D264298921EE00C8ED2B /* ActionPrediction.swift in Sources */,
 				DF20C7392578047E00C9DB98 /* Pose+Connection.swift in Sources */,
-				0BE3D272298A312300C8ED2B /* ControlProtocol.swift in Sources */,
 				FADD45BD24D55CE200955140 /* AVCaptureDevice+FrameRate.swift in Sources */,
 				0BE3D268298921EE00C8ED2B /* ActionClassifier.mlmodel in Sources */,
 				0BE3D267298921EE00C8ED2B /* ActionClassifier+Singleton.swift in Sources */,
 				4A2D23B622BB70E400494C55 /* MainViewController.swift in Sources */,
-				0B0BE8A729938972004E3215 /* PeerListViewController.swift in Sources */,
+				0BFE959729B89142004287B9 /* BLE_Tools.swift in Sources */,
 				DFE2078525AFECC800FB76EF /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
-				0BE3D271298A312300C8ED2B /* PeerListener.swift in Sources */,
 				DFA9EECB2571951800849AFB /* Pose.swift in Sources */,
 				0B0BE8BA299E1A70004E3215 /* pose_generated.swift in Sources */,
 				DF20C73C257805AE00C9DB98 /* Pose+Empty.swift in Sources */,
 				DF20C7362578044800C9DB98 /* Pose+Landmark.swift in Sources */,
-				0B0BE8A829938972004E3215 /* PasscodeViewController.swift in Sources */,
+				0BFE959B29B8BE11004287B9 /* BLE_VirtualHID.swift in Sources */,
 				DFD1ED022564427700466FDA /* VideoProcessingChain.swift in Sources */,
 				4A2D23B222BB70E400494C55 /* AppDelegate.swift in Sources */,
-				0BE3D270298A312300C8ED2B /* PeerConnection.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
