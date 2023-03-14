@@ -45,8 +45,20 @@
 		0B390B0729AE1601005DFB16 /* Pose.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFA9EECA2571951800849AFB /* Pose.swift */; };
 		0B390B0B29AF4083005DFB16 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 0B390B0A29AF4083005DFB16 /* FlatBuffers */; };
 		0B390B0F29AF415B005DFB16 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B390B0E29AF415B005DFB16 /* Info.plist */; };
-		0B390B1129B0AF9B005DFB16 /* VirtualHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390B1029B0AF9B005DFB16 /* VirtualHID.swift */; };
-		0B390B1229B0AF9B005DFB16 /* VirtualHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390B1029B0AF9B005DFB16 /* VirtualHID.swift */; };
+		0B3AEF7229C0692600D1E8AD /* BLECentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF6B29C0692600D1E8AD /* BLECentralManager.swift */; };
+		0B3AEF7329C0692600D1E8AD /* BLEConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF6C29C0692600D1E8AD /* BLEConnection.swift */; };
+		0B3AEF7429C0692600D1E8AD /* BLEServicesCharacteristics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF6D29C0692600D1E8AD /* BLEServicesCharacteristics.swift */; };
+		0B3AEF7529C0692600D1E8AD /* BLEInitStartStop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF6E29C0692600D1E8AD /* BLEInitStartStop.swift */; };
+		0B3AEF7629C0692600D1E8AD /* BLEReadWrite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF6F29C0692600D1E8AD /* BLEReadWrite.swift */; };
+		0B3AEF7729C0692600D1E8AD /* BLEProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF7029C0692600D1E8AD /* BLEProtocol.swift */; };
+		0B3AEF7829C0692600D1E8AD /* BLECentralHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF7129C0692600D1E8AD /* BLECentralHelper.swift */; };
+		0B3AEF7D29C0693C00D1E8AD /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF7929C0693B00D1E8AD /* Log.swift */; };
+		0B3AEF7E29C0693C00D1E8AD /* Datas.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF7A29C0693B00D1E8AD /* Datas.swift */; };
+		0B3AEF7F29C0693C00D1E8AD /* BLEController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF7B29C0693B00D1E8AD /* BLEController.swift */; };
+		0B3AEF8029C0693C00D1E8AD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF7C29C0693B00D1E8AD /* Extensions.swift */; };
+		0B3AEF8129C0696200D1E8AD /* BLEVirtualHIDDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390B1029B0AF9B005DFB16 /* BLEVirtualHIDDriver.swift */; };
+		0B3AEF8329C069F300D1E8AD /* BLESingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF8229C069F200D1E8AD /* BLESingleton.swift */; };
+		0B3AEF8629C06B3800D1E8AD /* BLECentralTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF8529C06B3800D1E8AD /* BLECentralTools.swift */; };
 		0BE3D263298921EE00C8ED2B /* ActionClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */; };
 		0BE3D264298921EE00C8ED2B /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */; };
 		0BE3D265298921EE00C8ED2B /* ActionClassifier+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */; };
@@ -54,11 +66,11 @@
 		0BE3D267298921EE00C8ED2B /* ActionClassifier+Singleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D260298921EE00C8ED2B /* ActionClassifier+Singleton.swift */; };
 		0BE3D268298921EE00C8ED2B /* ActionClassifier.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D261298921EE00C8ED2B /* ActionClassifier.mlmodel */; };
 		0BE3D269298921EE00C8ED2B /* ActionClassifier+Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D262298921EE00C8ED2B /* ActionClassifier+Label.swift */; };
-		0BFE959529B89142004287B9 /* BLE_PeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959229B89142004287B9 /* BLE_PeripheralManager.swift */; };
-		0BFE959629B89142004287B9 /* BLE_Protocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959329B89142004287B9 /* BLE_Protocol.swift */; };
-		0BFE959729B89142004287B9 /* BLE_Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959429B89142004287B9 /* BLE_Tools.swift */; };
+		0BFE959529B89142004287B9 /* BLEPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959229B89142004287B9 /* BLEPeripheralManager.swift */; };
+		0BFE959629B89142004287B9 /* BLEPeripheralProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959329B89142004287B9 /* BLEPeripheralProtocol.swift */; };
+		0BFE959729B89142004287B9 /* BLETools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959429B89142004287B9 /* BLETools.swift */; };
 		0BFE959929B896E2004287B9 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0BFE959829B896E2004287B9 /* CoreBluetooth.framework */; };
-		0BFE959B29B8BE11004287B9 /* BLE_VirtualHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959A29B8BE11004287B9 /* BLE_VirtualHID.swift */; };
+		0BFE959B29B8BE11004287B9 /* BLEVirtualHID.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFE959A29B8BE11004287B9 /* BLEVirtualHID.swift */; };
 		4A2D23B222BB70E400494C55 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D23B122BB70E400494C55 /* AppDelegate.swift */; };
 		4A2D23B622BB70E400494C55 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A2D23B522BB70E400494C55 /* MainViewController.swift */; };
 		4A2D23B922BB70E400494C55 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A2D23B722BB70E400494C55 /* Main.storyboard */; };
@@ -98,7 +110,20 @@
 		0B390AEE29AE067B005DFB16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0B390AF029AE067B005DFB16 /* MController_MacOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MController_MacOS.entitlements; sourceTree = "<group>"; };
 		0B390B0E29AF415B005DFB16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0B390B1029B0AF9B005DFB16 /* VirtualHID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualHID.swift; sourceTree = "<group>"; };
+		0B390B1029B0AF9B005DFB16 /* BLEVirtualHIDDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEVirtualHIDDriver.swift; sourceTree = "<group>"; };
+		0B3AEF6B29C0692600D1E8AD /* BLECentralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECentralManager.swift; sourceTree = "<group>"; };
+		0B3AEF6C29C0692600D1E8AD /* BLEConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEConnection.swift; sourceTree = "<group>"; };
+		0B3AEF6D29C0692600D1E8AD /* BLEServicesCharacteristics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEServicesCharacteristics.swift; sourceTree = "<group>"; };
+		0B3AEF6E29C0692600D1E8AD /* BLEInitStartStop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEInitStartStop.swift; sourceTree = "<group>"; };
+		0B3AEF6F29C0692600D1E8AD /* BLEReadWrite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEReadWrite.swift; sourceTree = "<group>"; };
+		0B3AEF7029C0692600D1E8AD /* BLEProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEProtocol.swift; sourceTree = "<group>"; };
+		0B3AEF7129C0692600D1E8AD /* BLECentralHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLECentralHelper.swift; sourceTree = "<group>"; };
+		0B3AEF7929C0693B00D1E8AD /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
+		0B3AEF7A29C0693B00D1E8AD /* Datas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Datas.swift; sourceTree = "<group>"; };
+		0B3AEF7B29C0693B00D1E8AD /* BLEController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEController.swift; sourceTree = "<group>"; };
+		0B3AEF7C29C0693B00D1E8AD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0B3AEF8229C069F200D1E8AD /* BLESingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLESingleton.swift; sourceTree = "<group>"; };
+		0B3AEF8529C06B3800D1E8AD /* BLECentralTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralTools.swift; sourceTree = "<group>"; };
 		0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+PredictAction.swift"; sourceTree = "<group>"; };
 		0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
 		0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+FrameRate.swift"; sourceTree = "<group>"; };
@@ -111,11 +136,11 @@
 		0BE3D26D298A312300C8ED2B /* ControlProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlProtocol.swift; sourceTree = "<group>"; };
 		0BE3D26E298A312300C8ED2B /* NWParameters+InitWithPasscode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NWParameters+InitWithPasscode.swift"; sourceTree = "<group>"; };
 		0BE3D26F298A312300C8ED2B /* PeerBrowser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerBrowser.swift; sourceTree = "<group>"; };
-		0BFE959229B89142004287B9 /* BLE_PeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_PeripheralManager.swift; sourceTree = "<group>"; };
-		0BFE959329B89142004287B9 /* BLE_Protocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Protocol.swift; sourceTree = "<group>"; };
-		0BFE959429B89142004287B9 /* BLE_Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLE_Tools.swift; sourceTree = "<group>"; };
+		0BFE959229B89142004287B9 /* BLEPeripheralManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEPeripheralManager.swift; sourceTree = "<group>"; };
+		0BFE959329B89142004287B9 /* BLEPeripheralProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLEPeripheralProtocol.swift; sourceTree = "<group>"; };
+		0BFE959429B89142004287B9 /* BLETools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLETools.swift; sourceTree = "<group>"; };
 		0BFE959829B896E2004287B9 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
-		0BFE959A29B8BE11004287B9 /* BLE_VirtualHID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLE_VirtualHID.swift; sourceTree = "<group>"; };
+		0BFE959A29B8BE11004287B9 /* BLEVirtualHID.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLEVirtualHID.swift; sourceTree = "<group>"; };
 		4A2D23AE22BB70E400494C55 /* MController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A2D23B122BB70E400494C55 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4A2D23B522BB70E400494C55 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -191,7 +216,6 @@
 				0B0BE8F4299F50F3004E3215 /* Main.storyboard */,
 				0B0BE8F7299F50F3004E3215 /* MotionHub.entitlements */,
 				0B0BE8EF299F50F2004E3215 /* MotionHub.xcdatamodeld */,
-				0B390B1029B0AF9B005DFB16 /* VirtualHID.swift */,
 			);
 			path = MotionHub;
 			sourceTree = "<group>";
@@ -210,6 +234,20 @@
 			path = MController_MacOS;
 			sourceTree = "<group>";
 		};
+		0B3AEF6A29C0692600D1E8AD /* BLE Stack */ = {
+			isa = PBXGroup;
+			children = (
+				0B3AEF6B29C0692600D1E8AD /* BLECentralManager.swift */,
+				0B3AEF6C29C0692600D1E8AD /* BLEConnection.swift */,
+				0B3AEF6D29C0692600D1E8AD /* BLEServicesCharacteristics.swift */,
+				0B3AEF6E29C0692600D1E8AD /* BLEInitStartStop.swift */,
+				0B3AEF6F29C0692600D1E8AD /* BLEReadWrite.swift */,
+				0B3AEF7029C0692600D1E8AD /* BLEProtocol.swift */,
+				0B3AEF7129C0692600D1E8AD /* BLECentralHelper.swift */,
+			);
+			path = "BLE Stack";
+			sourceTree = "<group>";
+		};
 		0BE3D26A298A312300C8ED2B /* Networking */ = {
 			isa = PBXGroup;
 			children = (
@@ -226,10 +264,18 @@
 		0BFE959129B89142004287B9 /* BLE */ = {
 			isa = PBXGroup;
 			children = (
-				0BFE959229B89142004287B9 /* BLE_PeripheralManager.swift */,
-				0BFE959329B89142004287B9 /* BLE_Protocol.swift */,
-				0BFE959429B89142004287B9 /* BLE_Tools.swift */,
-				0BFE959A29B8BE11004287B9 /* BLE_VirtualHID.swift */,
+				0B3AEF8229C069F200D1E8AD /* BLESingleton.swift */,
+				0B3AEF7B29C0693B00D1E8AD /* BLEController.swift */,
+				0B3AEF7A29C0693B00D1E8AD /* Datas.swift */,
+				0B3AEF7C29C0693B00D1E8AD /* Extensions.swift */,
+				0B3AEF7929C0693B00D1E8AD /* Log.swift */,
+				0B3AEF6A29C0692600D1E8AD /* BLE Stack */,
+				0BFE959229B89142004287B9 /* BLEPeripheralManager.swift */,
+				0BFE959329B89142004287B9 /* BLEPeripheralProtocol.swift */,
+				0BFE959429B89142004287B9 /* BLETools.swift */,
+				0BFE959A29B8BE11004287B9 /* BLEVirtualHID.swift */,
+				0B390B1029B0AF9B005DFB16 /* BLEVirtualHIDDriver.swift */,
+				0B3AEF8529C06B3800D1E8AD /* BLECentralTools.swift */,
 			);
 			path = BLE;
 			sourceTree = "<group>";
@@ -512,14 +558,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B3AEF7E29C0693C00D1E8AD /* Datas.swift in Sources */,
 				0B0BE8F1299F50F2004E3215 /* MotionHub.xcdatamodeld in Sources */,
+				0B3AEF7429C0692600D1E8AD /* BLEServicesCharacteristics.swift in Sources */,
+				0B3AEF8329C069F300D1E8AD /* BLESingleton.swift in Sources */,
+				0B3AEF7329C0692600D1E8AD /* BLEConnection.swift in Sources */,
+				0B3AEF7629C0692600D1E8AD /* BLEReadWrite.swift in Sources */,
 				0B0BE904299F51CC004E3215 /* pose_generated.swift in Sources */,
-				0B390B1129B0AF9B005DFB16 /* VirtualHID.swift in Sources */,
+				0B3AEF8629C06B3800D1E8AD /* BLECentralTools.swift in Sources */,
+				0B3AEF7529C0692600D1E8AD /* BLEInitStartStop.swift in Sources */,
+				0B3AEF8029C0693C00D1E8AD /* Extensions.swift in Sources */,
+				0B3AEF7D29C0693C00D1E8AD /* Log.swift in Sources */,
 				0B0BE8EE299F50F2004E3215 /* ViewController.swift in Sources */,
+				0B3AEF7229C0692600D1E8AD /* BLECentralManager.swift in Sources */,
+				0B3AEF7829C0692600D1E8AD /* BLECentralHelper.swift in Sources */,
 				0B0BE8EC299F50F2004E3215 /* AppDelegate.swift in Sources */,
+				0B3AEF7729C0692600D1E8AD /* BLEProtocol.swift in Sources */,
 				0B0BE8FD299F51B9004E3215 /* PeerConnection.swift in Sources */,
+				0B3AEF8129C0696200D1E8AD /* BLEVirtualHIDDriver.swift in Sources */,
 				0B0BE908299F532E004E3215 /* PeerListener.swift in Sources */,
 				0B0BE8FF299F51C0004E3215 /* NWParameters+InitWithPasscode.swift in Sources */,
+				0B3AEF7F29C0693C00D1E8AD /* BLEController.swift in Sources */,
 				0B0BE8FE299F51BC004E3215 /* ControlProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -545,7 +604,6 @@
 				0B390AFE29AE11D2005DFB16 /* ActionClassifier+LabelCheck.swift in Sources */,
 				0B390B0729AE1601005DFB16 /* Pose.swift in Sources */,
 				0B390B0029AE11D2005DFB16 /* ActionPrediction.swift in Sources */,
-				0B390B1229B0AF9B005DFB16 /* VirtualHID.swift in Sources */,
 				0B390AE729AE067A005DFB16 /* ViewController.swift in Sources */,
 				0B390AE529AE067A005DFB16 /* AppDelegate.swift in Sources */,
 				0B390B0329AE15F9005DFB16 /* pose_generated.swift in Sources */,
@@ -560,9 +618,9 @@
 				0BE3D265298921EE00C8ED2B /* ActionClassifier+FrameRate.swift in Sources */,
 				DF96FB1F256864520086C3AB /* PerformanceReporter.swift in Sources */,
 				DF898FB425AFC15700CA35A8 /* AVCaptureDeviceInput+Camera.swift in Sources */,
-				0BFE959529B89142004287B9 /* BLE_PeripheralManager.swift in Sources */,
+				0BFE959529B89142004287B9 /* BLEPeripheralManager.swift in Sources */,
 				0BE3D266298921EE00C8ED2B /* ActionClassifier+LabelCheck.swift in Sources */,
-				0BFE959629B89142004287B9 /* BLE_Protocol.swift in Sources */,
+				0BFE959629B89142004287B9 /* BLEPeripheralProtocol.swift in Sources */,
 				0BE3D263298921EE00C8ED2B /* ActionClassifier+PredictAction.swift in Sources */,
 				0BE3D269298921EE00C8ED2B /* ActionClassifier+Label.swift in Sources */,
 				4AA5C4B822BB9CC200277977 /* VideoCapture.swift in Sources */,
@@ -572,13 +630,13 @@
 				0BE3D268298921EE00C8ED2B /* ActionClassifier.mlmodel in Sources */,
 				0BE3D267298921EE00C8ED2B /* ActionClassifier+Singleton.swift in Sources */,
 				4A2D23B622BB70E400494C55 /* MainViewController.swift in Sources */,
-				0BFE959729B89142004287B9 /* BLE_Tools.swift in Sources */,
+				0BFE959729B89142004287B9 /* BLETools.swift in Sources */,
 				DFE2078525AFECC800FB76EF /* AVCaptureVideoDataOutput+PixelFormat.swift in Sources */,
 				DFA9EECB2571951800849AFB /* Pose.swift in Sources */,
 				0B0BE8BA299E1A70004E3215 /* pose_generated.swift in Sources */,
 				DF20C73C257805AE00C9DB98 /* Pose+Empty.swift in Sources */,
 				DF20C7362578044800C9DB98 /* Pose+Landmark.swift in Sources */,
-				0BFE959B29B8BE11004287B9 /* BLE_VirtualHID.swift in Sources */,
+				0BFE959B29B8BE11004287B9 /* BLEVirtualHID.swift in Sources */,
 				DFD1ED022564427700466FDA /* VideoProcessingChain.swift in Sources */,
 				4A2D23B222BB70E400494C55 /* AppDelegate.swift in Sources */,
 			);

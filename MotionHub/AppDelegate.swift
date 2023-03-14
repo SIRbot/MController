@@ -7,16 +7,37 @@
 //
 
 import Cocoa
+import UserNotifications
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-    
+    let singleton = Singleton.sharedInstance()
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        
+        singleton.logger.log("application didFinishLaunchingWithOptions")
+        
+        singleton.appRestored = false
+        singleton.centralManagerToRestore = nil
+
+        registerLocal()
     }
+    
+    @objc func registerLocal() {
+        let center = UNUserNotificationCenter.current()
+
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                print("Yay!")
+            } else {
+                print("D'oh")
+            }
+        }
+    }
+
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application

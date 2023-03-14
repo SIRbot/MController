@@ -8,7 +8,7 @@
 
 import Foundation
 
-class BLE_VirtualHID : NSObject{
+class BLEVirtualHID : NSObject{
     
     var ble: BLEPeripheralManager?
     
@@ -143,8 +143,6 @@ class BLE_VirtualHID : NSObject{
         self.avatarState.jump = false
         self.avatarState.run = false
     }
-    
-    
     
     private func keyboardDown(_ key: String){
         ble?.sendEvent(key: key, type: .keyDown)

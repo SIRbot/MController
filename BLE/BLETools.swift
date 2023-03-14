@@ -1,6 +1,5 @@
 //
-//  BLE_Tools.swift
-//  BlueToothPeripheral
+//  BLETools.swift
 //
 //  Created by Olivier Robin on 06/03/2017.
 //  Copyright © 2017 fr.ormaa. All rights reserved.
@@ -59,7 +58,5 @@ extension BLEPeripheralManager {
         localPeripheralManager.updateValue(data, for: self.notifyCharac!, onSubscribedCentrals: [self.notifyCentral!])
         
     }
-    
-    
     
 }

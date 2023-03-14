@@ -49,7 +49,7 @@ class MainViewController: UIViewController, BLEPeripheralProtocol {
     var actionFrameCounts = [String: Int]()
     
 //    var ble: BLEPeripheralManager?
-    var virtualHID: BLE_VirtualHID = BLE_VirtualHID()
+    var virtualHID: BLEVirtualHID = BLEVirtualHID()
     
     // Activate / disActivate the peripheral
     @IBAction func switchPeripheralOnOff(_ sender: AnyObject) {
