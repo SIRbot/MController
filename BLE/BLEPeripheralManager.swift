@@ -37,6 +37,10 @@ let TextToAdvertise = "VirtualHIDOverGATT"    // < 28 bytes needed.
 enum MControllerBLEEvent{
     case keyUp
     case keyDown
+    case mouseMove
+    case mouseDown
+    case mouseUp
+    case mouseClicked
 }
 
 // BlueTooth do not work if it not instanciated, called, managed, from a uiview controller, linked to a .xib, or storyboard
@@ -62,12 +66,14 @@ class BLEPeripheralManager : NSObject, CBPeripheralManagerDelegate {
     func sendEvent(key: String, type: MControllerBLEEvent){
         var text : String = "I"
         switch type{
-            case .keyUp:
-                text = "U " + key
-                break
-            case .keyDown:
-                text = "D " + key
-                break
+        case .keyUp:
+            text = "U, " + key
+            break
+        case .keyDown:
+            text = "D, " + key
+            break
+        default:
+            return
         }
         
         self.notifyValue(text: text)

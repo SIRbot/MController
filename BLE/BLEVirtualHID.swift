@@ -29,15 +29,17 @@ class BLEVirtualHID : NSObject{
     let aKeyCode: String = "a"
     let dKeyCode: String = "d"
     let spaceKeyCode: String = "/ "
-    let sixKeyCode: String = "6"
-    let threeKeyCode: String = "3" // u
+    let mouseLeftKeyCode: String = "m_l"
+    let mouseRightKeyCode: String = "m_r"
+    let mouseUpKeyCode: String = "m_u"
+    let mouseDowndownMouseCodeL: String = "m_d"
     
     public func faceLeft(){
         if !self.avatarState.turnLeft{
             if self.avatarState.turnRight{
-                keyboardUp(self.sixKeyCode)
+                keyboardUp(self.mouseRightKeyCode)
             }
-            keyboardDown(self.threeKeyCode)
+            keyboardDown(self.mouseLeftKeyCode)
             self.avatarState.turnRight = false
             self.avatarState.turnLeft = true
             print("Turn Left")
@@ -47,10 +49,10 @@ class BLEVirtualHID : NSObject{
     public func faceRight(){
         if !self.avatarState.turnRight{
             if self.avatarState.turnLeft{
-                keyboardUp(self.threeKeyCode)
+                keyboardUp(self.mouseLeftKeyCode)
 
             }
-            keyboardDown(self.sixKeyCode)
+            keyboardDown(self.mouseRightKeyCode)
             self.avatarState.turnRight = true
             self.avatarState.turnLeft = false
             print("Turn Right")
@@ -67,13 +69,13 @@ class BLEVirtualHID : NSObject{
     
     public func faceCenter(){
         if self.avatarState.turnRight{
-            keyboardUp(self.sixKeyCode)
+            keyboardUp(self.mouseRightKeyCode)
             self.avatarState.turnRight = false
             print("Turn Center")
         }
         
         if self.avatarState.turnLeft{
-            keyboardUp(self.threeKeyCode)
+            keyboardUp(self.mouseLeftKeyCode)
             self.avatarState.turnLeft = false
             print("Turn Center")
         }

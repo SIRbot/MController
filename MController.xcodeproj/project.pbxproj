@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B0AFFAD29C1A46300631876 /* VirtualHIDDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0AFFAC29C1A46300631876 /* VirtualHIDDriver.swift */; };
 		0B0BE8BA299E1A70004E3215 /* pose_generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8B9299E1A70004E3215 /* pose_generated.swift */; };
 		0B0BE8C1299E1E00004E3215 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0BE8C0299E1E00004E3215 /* FlatBuffers */; };
 		0B0BE8EC299F50F2004E3215 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8EB299F50F2004E3215 /* AppDelegate.swift */; };
 		0B0BE8EE299F50F2004E3215 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8ED299F50F2004E3215 /* ViewController.swift */; };
-		0B0BE8F1299F50F2004E3215 /* MotionHub.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0B0BE8EF299F50F2004E3215 /* MotionHub.xcdatamodeld */; };
 		0B0BE8F3299F50F3004E3215 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B0BE8F2299F50F3004E3215 /* Assets.xcassets */; };
 		0B0BE8F6299F50F3004E3215 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0B0BE8F4299F50F3004E3215 /* Main.storyboard */; };
 		0B0BE8FC299F5166004E3215 /* FlatBuffers in Frameworks */ = {isa = PBXBuildFile; productRef = 0B0BE8FB299F5166004E3215 /* FlatBuffers */; };
@@ -59,6 +59,7 @@
 		0B3AEF8129C0696200D1E8AD /* BLEVirtualHIDDriver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B390B1029B0AF9B005DFB16 /* BLEVirtualHIDDriver.swift */; };
 		0B3AEF8329C069F300D1E8AD /* BLESingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF8229C069F200D1E8AD /* BLESingleton.swift */; };
 		0B3AEF8629C06B3800D1E8AD /* BLECentralTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B3AEF8529C06B3800D1E8AD /* BLECentralTools.swift */; };
+		0B7BFD0F29C197210010BA6D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0B7BFD0E29C197210010BA6D /* Info.plist */; };
 		0BE3D263298921EE00C8ED2B /* ActionClassifier+PredictAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */; };
 		0BE3D264298921EE00C8ED2B /* ActionPrediction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */; };
 		0BE3D265298921EE00C8ED2B /* ActionClassifier+FrameRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */; };
@@ -89,18 +90,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0B0BE8A529938972004E3215 /* PeerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeerListViewController.swift; sourceTree = "<group>"; };
-		0B0BE8A629938972004E3215 /* PasscodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasscodeViewController.swift; sourceTree = "<group>"; };
+		0B0AFFAC29C1A46300631876 /* VirtualHIDDriver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualHIDDriver.swift; sourceTree = "<group>"; };
 		0B0BE8B9299E1A70004E3215 /* pose_generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = pose_generated.swift; sourceTree = "<group>"; };
 		0B0BE8BC299E1C6D004E3215 /* flatbuffers */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = flatbuffers; sourceTree = "<group>"; };
 		0B0BE8C2299E20A2004E3215 /* pose.fbs */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pose.fbs; sourceTree = "<group>"; };
 		0B0BE8E9299F50F1004E3215 /* MotionHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MotionHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B0BE8EB299F50F2004E3215 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0B0BE8ED299F50F2004E3215 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0B0BE8F0299F50F2004E3215 /* MotionHub.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MotionHub.xcdatamodel; sourceTree = "<group>"; };
 		0B0BE8F2299F50F3004E3215 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B0BE8F5299F50F3004E3215 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0B0BE8F7299F50F3004E3215 /* MotionHub.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MotionHub.entitlements; sourceTree = "<group>"; };
 		0B0BE906299F529E004E3215 /* PeerConnection+Send.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PeerConnection+Send.swift"; sourceTree = "<group>"; };
 		0B390AE229AE067A005DFB16 /* MController_MacOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MController_MacOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B390AE429AE067A005DFB16 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +122,7 @@
 		0B3AEF7C29C0693B00D1E8AD /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		0B3AEF8229C069F200D1E8AD /* BLESingleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLESingleton.swift; sourceTree = "<group>"; };
 		0B3AEF8529C06B3800D1E8AD /* BLECentralTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BLECentralTools.swift; sourceTree = "<group>"; };
+		0B7BFD0E29C197210010BA6D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0BE3D25C298921EE00C8ED2B /* ActionClassifier+PredictAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+PredictAction.swift"; sourceTree = "<group>"; };
 		0BE3D25D298921EE00C8ED2B /* ActionPrediction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionPrediction.swift; sourceTree = "<group>"; };
 		0BE3D25E298921EE00C8ED2B /* ActionClassifier+FrameRate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ActionClassifier+FrameRate.swift"; sourceTree = "<group>"; };
@@ -214,8 +213,7 @@
 				0B0BE8ED299F50F2004E3215 /* ViewController.swift */,
 				0B0BE8F2299F50F3004E3215 /* Assets.xcassets */,
 				0B0BE8F4299F50F3004E3215 /* Main.storyboard */,
-				0B0BE8F7299F50F3004E3215 /* MotionHub.entitlements */,
-				0B0BE8EF299F50F2004E3215 /* MotionHub.xcdatamodeld */,
+				0B7BFD0E29C197210010BA6D /* Info.plist */,
 			);
 			path = MotionHub;
 			sourceTree = "<group>";
@@ -230,6 +228,7 @@
 				0B390AF029AE067B005DFB16 /* MController_MacOS.entitlements */,
 				0B390AE829AE067A005DFB16 /* MController_MacOS.xcdatamodeld */,
 				0B390B0E29AF415B005DFB16 /* Info.plist */,
+				0B0AFFAC29C1A46300631876 /* VirtualHIDDriver.swift */,
 			);
 			path = MController_MacOS;
 			sourceTree = "<group>";
@@ -359,8 +358,6 @@
 		6594E51A23454A2300D3C44D /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0B0BE8A629938972004E3215 /* PasscodeViewController.swift */,
-				0B0BE8A529938972004E3215 /* PeerListViewController.swift */,
 				4A2D23B522BB70E400494C55 /* MainViewController.swift */,
 				4A2D23B722BB70E400494C55 /* Main.storyboard */,
 			);
@@ -528,6 +525,7 @@
 			files = (
 				0B0BE8F3299F50F3004E3215 /* Assets.xcassets in Resources */,
 				0B0BE8F6299F50F3004E3215 /* Main.storyboard in Resources */,
+				0B7BFD0F29C197210010BA6D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -559,7 +557,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B3AEF7E29C0693C00D1E8AD /* Datas.swift in Sources */,
-				0B0BE8F1299F50F2004E3215 /* MotionHub.xcdatamodeld in Sources */,
 				0B3AEF7429C0692600D1E8AD /* BLEServicesCharacteristics.swift in Sources */,
 				0B3AEF8329C069F300D1E8AD /* BLESingleton.swift in Sources */,
 				0B3AEF7329C0692600D1E8AD /* BLEConnection.swift in Sources */,
@@ -604,6 +601,7 @@
 				0B390AFE29AE11D2005DFB16 /* ActionClassifier+LabelCheck.swift in Sources */,
 				0B390B0729AE1601005DFB16 /* Pose.swift in Sources */,
 				0B390B0029AE11D2005DFB16 /* ActionPrediction.swift in Sources */,
+				0B0AFFAD29C1A46300631876 /* VirtualHIDDriver.swift in Sources */,
 				0B390AE729AE067A005DFB16 /* ViewController.swift in Sources */,
 				0B390AE529AE067A005DFB16 /* AppDelegate.swift in Sources */,
 				0B390B0329AE15F9005DFB16 /* pose_generated.swift in Sources */,
@@ -693,6 +691,7 @@
 				DEVELOPMENT_TEAM = Y5M2VU5836;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Need bluetooth to connect to MController";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Apple. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -723,6 +722,7 @@
 				DEVELOPMENT_TEAM = Y5M2VU5836;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSBluetoothAlwaysUsageDescription = "Need bluetooth to connect to MController";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "Copyright © 2023 Apple. All rights reserved.";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -1042,16 +1042,6 @@
 /* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
-		0B0BE8EF299F50F2004E3215 /* MotionHub.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				0B0BE8F0299F50F2004E3215 /* MotionHub.xcdatamodel */,
-			);
-			currentVersion = 0B0BE8F0299F50F2004E3215 /* MotionHub.xcdatamodel */;
-			path = MotionHub.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
 		0B390AE829AE067A005DFB16 /* MController_MacOS.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (

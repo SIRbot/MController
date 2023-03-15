@@ -284,7 +284,14 @@ extension MainViewController {
         }
 
         // Update the UI's full-screen image view on the main thread.
-        DispatchQueue.main.async { self.imageView.image = frameWithPosesRendering }
+        
+        // flip the image when using front camera
+        if(self.videoCapture.cameraPosition == .back){
+            DispatchQueue.main.async { self.imageView.image = frameWithPosesRendering }
+        }else{
+            DispatchQueue.main.async { self.imageView.image = frameWithPosesRendering.withHorizontallyFlippedOrientation() }
+        }
+        
     }
     
     private func handlePose(_ content: Data) {
@@ -307,6 +314,8 @@ extension MainViewController {
 //        let zippedPairs = zip(joints, locations)
 //        let jointLocations = Dictionary(uniqueKeysWithValues: zippedPairs)
         
+        
+        // TODO: mirror the joints when using front camera since the input is mirrored
         if joints.contains("right_ear_joint") && !joints.contains("left_ear_joint"){
             virtualHID.faceLeft()
             

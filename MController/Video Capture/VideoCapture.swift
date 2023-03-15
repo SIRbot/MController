@@ -49,7 +49,7 @@ class VideoCapture: NSObject {
     }
 
     /// The camera the app uses to configure the capture session.
-    private var cameraPosition = AVCaptureDevice.Position.front {
+    public var cameraPosition = AVCaptureDevice.Position.front {
         didSet { createVideoFramePublisher() }
     }
 
@@ -242,7 +242,8 @@ extension VideoCapture {
         }
 
         if connection.isVideoMirroringSupported {
-            connection.isVideoMirrored = horizontalFlip
+            // flip here will result filped vision outcome
+//            connection.isVideoMirrored = horizontalFlip
         }
         #if !os(OSX)
         if connection.isVideoStabilizationSupported {

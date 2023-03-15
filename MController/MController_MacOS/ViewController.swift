@@ -38,7 +38,7 @@ class ViewController: NSViewController {
     /// - Tag: actionFrameCounts
     var actionFrameCounts = [String: Int]()
     
-    private var virtualHID: VirtualHID = VirtualHID()
+    private var virtualHID: VirtualHIDDriver = VirtualHIDDriver()
 
     override func viewDidLoad() {
         super.viewDidLoad()
