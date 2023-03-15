@@ -134,6 +134,8 @@ class BLEVirtualHIDDriver : NSObject{
             keyboardDown(aKeyCode)
         case "d":
             keyboardDown(dKeyCode)
+        case "/ ":
+            keyboardDown(spaceKeyCode)
         case "m_l":
             keyboardDown(fourKeyCode)
         case "m_r":
@@ -157,6 +159,8 @@ class BLEVirtualHIDDriver : NSObject{
             keyboardUp(aKeyCode)
         case "d":
             keyboardUp(dKeyCode)
+        case "/ ":
+            keyboardUp(spaceKeyCode)
         case "m_l":
             keyboardUp(fourKeyCode)
         case "m_r":
