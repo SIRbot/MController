@@ -20,13 +20,27 @@ class BLEVirtualHIDDriver : NSObject{
     let aKeyCode: CGKeyCode = 0
     let dKeyCode: CGKeyCode = 2
     let spaceKeyCode: CGKeyCode = 49
-    let oKeyCode: CGKeyCode = 88
-    let uKeyCode: CGKeyCode = 86 // 3
-    
-    
+    let oneKeyCode: CGKeyCode = 83
+    let twoKeyCode: CGKeyCode = 84 //2, down, 84
+    let threeKeyCode: CGKeyCode = 85
+    let fourKeyCode: CGKeyCode = 84 // 4, left, 86
+    let fiveKeyCode: CGKeyCode = 87
+    let sixKeyCode: CGKeyCode = 91 //6, right, 88
+    let sevenKeyCode: CGKeyCode = 89
+    let eightKeyCode: CGKeyCode = 91 // 8, up, 90
+    let nightKeyCode: CGKeyCode = 92
     
     private func handleInput(input:String){
-        return
+        let event = input.split(separator: ", ")[0]
+        let key = input.split(separator: ", ")[1]
+        if(event == "U"){
+            
+        }else if(event == "D"){
+            
+        }else{
+            print("Error: invalid input")
+            return
+        }
     }
     
     private func moveLeft(){
@@ -108,6 +122,44 @@ class BLEVirtualHIDDriver : NSObject{
     private func rightMouseClicked(){
         rightMouseDown()
         rightMouseUp()
+    }
+    
+    private func keyboardDown(_ key: String){
+        switch key{
+        case "w":
+            keyboardDown(wKeyCode)
+        case "s":
+            keyboardDown(sKeyCode)
+        case "a":
+            keyboardDown(aKeyCode)
+        case "d":
+            keyboardDown(dKeyCode)
+        case "4":
+            keyboardDown(fourKeyCode)
+        case "6":
+            keyboardDown(sixKeyCode)
+        default:
+            return
+        }
+    }
+    
+    private func keyboardUp(_ key: String){
+        switch key{
+        case "w":
+            keyboardUp(wKeyCode)
+        case "s":
+            keyboardUp(sKeyCode)
+        case "a":
+            keyboardUp(aKeyCode)
+        case "d":
+            keyboardUp(dKeyCode)
+        case "4":
+            keyboardUp(fourKeyCode)
+        case "6":
+            keyboardUp(sixKeyCode)
+        default:
+            return
+        }
     }
     
     private func keyboardDown(_ keycode: CGKeyCode){

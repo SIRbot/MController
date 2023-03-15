@@ -706,22 +706,98 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="MotionHub" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-cr-3b3">
-                                <rect key="frame" x="183" y="119" width="115" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" controlSize="large" lineBreakMode="clipping" alignment="center" title="Label" id="9ps-ie-a0c">
-                                    <font key="font" textStyle="largeTitle" name=".SFNS-Regular"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <stackView distribution="fill" orientation="vertical" alignment="leading" spacing="0.0" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4jX-Lz-8Nh">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                                <subviews>
+                                    <stackView distribution="fill" orientation="horizontal" alignment="centerY" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FgV-G9-00q">
+                                        <rect key="frame" x="0.0" y="262" width="147" height="58"/>
+                                        <subviews>
+                                            <imageView translatesAutoresizingMaskIntoConstraints="NO" id="F8a-vD-ats">
+                                                <rect key="frame" x="10" y="23.5" width="17" height="13"/>
+                                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="wifi" catalog="system" id="iYC-Wt-Ok8"/>
+                                            </imageView>
+                                            <switch horizontalHuggingPriority="750" verticalHuggingPriority="750" controlSize="large" baseWritingDirection="leftToRight" alignment="left" translatesAutoresizingMaskIntoConstraints="NO" id="VXX-IS-c7J" userLabel="CentralSwitch">
+                                                <rect key="frame" x="33" y="16" width="42" height="25"/>
+                                                <connections>
+                                                    <action selector="centralSwitchOnOff:" target="XfG-lQ-9wD" id="O2I-6g-Pxx"/>
+                                                </connections>
+                                            </switch>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="hAm-cr-3b3">
+                                                <rect key="frame" x="79" y="14" width="70" height="31"/>
+                                                <textFieldCell key="cell" controlSize="large" lineBreakMode="clipping" alignment="center" title="Label" id="9ps-ie-a0c">
+                                                    <font key="font" textStyle="largeTitle" name=".SFNS-Regular"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                            </textField>
+                                        </subviews>
+                                        <edgeInsets key="edgeInsets" left="10" right="0.0" top="0.0" bottom="0.0"/>
+                                        <visibilityPriorities>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                            <integer value="1000"/>
+                                        </visibilityPriorities>
+                                        <customSpacing>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                            <real value="3.4028234663852886e+38"/>
+                                        </customSpacing>
+                                    </stackView>
+                                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23Y-3m-VIo" userLabel="LogView">
+                                        <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
+                                        <clipView key="contentView" drawsBackground="NO" id="mJH-lV-7Jq">
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <subviews>
+                                                <textView wantsLayer="YES" importsGraphics="NO" richText="NO" verticallyResizable="YES" spellingCorrection="YES" smartInsertDelete="YES" id="WcN-OK-HZt">
+                                                    <rect key="frame" x="0.0" y="0.0" width="480" height="262"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                    <size key="minSize" width="480" height="262"/>
+                                                    <size key="maxSize" width="480" height="10000000"/>
+                                                    <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                </textView>
+                                            </subviews>
+                                        </clipView>
+                                        <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="tKD-aa-TQ5">
+                                            <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                        <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="iY5-Kp-PFb">
+                                            <rect key="frame" x="464" y="0.0" width="16" height="262"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </scroller>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="23Y-3m-VIo" firstAttribute="height" secondItem="4jX-Lz-8Nh" secondAttribute="height" multiplier="0.82" id="agq-2b-RPH"/>
+                                </constraints>
+                                <visibilityPriorities>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
+                                </visibilityPriorities>
+                                <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
+                                </customSpacing>
+                            </stackView>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="4jX-Lz-8Nh" firstAttribute="height" secondItem="m2S-Jp-Qdl" secondAttribute="height" id="1aX-BL-71I"/>
+                            <constraint firstItem="4jX-Lz-8Nh" firstAttribute="width" secondItem="m2S-Jp-Qdl" secondAttribute="width" id="CS0-25-RNh"/>
+                            <constraint firstItem="4jX-Lz-8Nh" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" id="JOZ-qk-nJA"/>
+                            <constraint firstItem="4jX-Lz-8Nh" firstAttribute="centerY" secondItem="m2S-Jp-Qdl" secondAttribute="centerY" id="zAT-Fa-Auy"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="centerLabel" destination="hAm-cr-3b3" id="rdV-JX-JAx"/>
+                        <outlet property="centralSwitch" destination="VXX-IS-c7J" id="yz7-Dv-fgp"/>
+                        <outlet property="logTextView" destination="WcN-OK-HZt" id="T7M-XG-pyJ"/>
+                        <outlet property="logView" destination="23Y-3m-VIo" id="jMG-gh-aco"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -729,4 +805,7 @@
             <point key="canvasLocation" x="75" y="655"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="wifi" catalog="system" width="17" height="13"/>
+    </resources>
 </document>

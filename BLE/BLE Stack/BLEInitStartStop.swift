@@ -19,7 +19,8 @@ extension BLECentralManager {
 
     func log(_ object: Any?) {
 //        appDelegate?.singleton.logger.log(object)
-        return
+        guard let info = object else {return}
+        print(info)
     }
     
     
@@ -198,7 +199,5 @@ extension BLECentralManager {
         }
         
     }
-
-    
     
 }

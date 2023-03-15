@@ -11,11 +11,7 @@ import CoreBluetooth
 //import UIKit
 //import UserNotifications
 
-
-
 extension BLECentralManager {
-    
-    
     // allow the discover services and characteristics of the peripharal already connected
     //
     func discoverServicesAndCharac() {
@@ -23,8 +19,6 @@ extension BLECentralManager {
         servicesDiscovered.removeAll()
         peripheralConnected?.discoverServices( nil )
     }
-
-
     
     func setNotify(characteristicUUID: String) {
 
@@ -38,9 +32,6 @@ extension BLECentralManager {
         })
         
     }
-    
-    
-    
     
     // delegate
     // Discovered service of the peripheral
@@ -62,8 +53,6 @@ extension BLECentralManager {
         })
         
     }
-    
-    
     
     // delegate
     // discovered characteristics for a service
@@ -90,8 +79,6 @@ extension BLECentralManager {
         
     }
     
-    
-    
     // delegate
     // tell if notification when we request a notification for a charac.
     //
@@ -103,9 +90,5 @@ extension BLECentralManager {
             log("didUpdateNotificationStateFor characteristic : " + characteristic.uuid.uuidString )
         }
     }
-    
-
-    
-
     
 }

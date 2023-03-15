@@ -31,9 +31,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
         center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
             if granted {
-                print("Yay!")
+                print("Yay! We can annoy you :)")
             } else {
-                print("D'oh")
+                print("D'oh, see you next time :(")
             }
         }
     }

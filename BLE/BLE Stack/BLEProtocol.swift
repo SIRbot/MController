@@ -14,7 +14,7 @@ protocol BLEProtocol {
     func disconnected(message: String)
     func failConnected(message: String)
     func connected(message: String)
-    func valueRead(message: String)
+    func valueRead(charuuid: String, message: String)
     func valueWrite(message: String)
 
 }

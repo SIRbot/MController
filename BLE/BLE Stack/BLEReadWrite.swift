@@ -128,14 +128,14 @@ extension BLECentralManager {
                 str += String(describing: b)
             }
             
-            str = String.init(data: characteristic.value!, encoding: .utf16)!
+            str = String.init(data: characteristic.value!, encoding: .utf8)!
             
             log("didUpdateValueFor characteristic : " + characteristic.uuid.uuidString  + " -- " + str)
             
             // Save the value
             valueReadBytes = array
             
-            bleDelegate?.valueRead(message: str)
+            bleDelegate?.valueRead(charuuid: characteristic.uuid.uuidString, message: str)
         }
     }
     

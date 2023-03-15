@@ -211,10 +211,10 @@ class BLEController: BLEProtocol {
     
     // called by bluetooth stack
     //
-    func valueRead(message: String) {
+    func valueRead(charuuid: String, message: String) {
         log("valueRead : " + message)
         
-        viewControllerDelegate?.valueRead(message: message)
+        viewControllerDelegate?.valueRead(charuuid: charuuid, message: message)
     }
 
     func valueWrite(message: String) {

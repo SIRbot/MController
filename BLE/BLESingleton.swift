@@ -13,9 +13,7 @@ class Singleton: NSObject {
     class func sharedInstance() -> Singleton {
         return appControllerSingletonGlobal
     }
-    
 
-    
     // used by BLE stack
     let serialQueue = DispatchQueue.global(qos: DispatchQoS.QoSClass.default) //DispatchQueue(label: "my serial queue")
     
