@@ -8,7 +8,6 @@ The app's main view controller.
 import UIKit
 import Vision
 import CoreBluetooth
-import FlatBuffers
 
 @available(iOS 14.0, *)
 class MainViewController: UIViewController, BLEPeripheralProtocol {
@@ -181,8 +180,7 @@ extension MainViewController: VideoProcessingChainDelegate {
         // Present the prediction in the UI.
         updateUILabelsWithPrediction(actionPrediction)
         
-        guard let data = actionPrediction.label.data(using: .unicode) else {return}
-        handleAction(data)
+        handleAction(actionPrediction.label)
     }
 
     /// Receives a frame and any poses in that frame.
@@ -203,7 +201,7 @@ extension MainViewController: VideoProcessingChainDelegate {
         guard let poses:[Pose] = poses else {return}
         
         for pose in poses{
-            handlePose(pose.poseData)
+            handlePose(pose)
         }
     }
 }
@@ -294,20 +292,14 @@ extension MainViewController {
         
     }
     
-    private func handlePose(_ content: Data) {
-        
-        //Decode from flatbuffer
-        let buf = ByteBuffer(data: content)
-        let pose = MController_Pose.init(buf, o: Int32(buf.read(def: UOffset.self, position: buf.reader)) + Int32(buf.reader))
-        
+    private func handlePose(_ pose: Pose) {
         var joints :[String] = []
         var locations : [CGPoint] = []
 
-        for i in 0..<pose.landmarksCount{
-            let landmark = pose.landmarks(at: i)
+        for landmark in pose.landmarks{
 //            print("landmark["+String(i)+"]: " + (landmark?.name)!)
-            joints.append((landmark?.name)!)
-            locations.append(CGPoint(x: CGFloat((landmark?.x)!), y: CGFloat((landmark?.x)!)))
+            joints.append(landmark.name.rawValue.rawValue)
+            locations.append(CGPoint(x: landmark.location.x, y: landmark.location.y))
         }
         
         //construct a name-landmark dict
@@ -327,9 +319,8 @@ extension MainViewController {
         }
     }
     
-    private func handleAction(_ content: Data) {
+    private func handleAction(_ action: String) {
         // Handle the peer placing a character on a given location.
-        guard let action = String(data: content, encoding: .unicode) else { return}
         NSLog("recv action: " + action)
         switch action {
 //            case "squat":

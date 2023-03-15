@@ -9,7 +9,6 @@ A `Pose` is a collection of "landmarks" and connections between select landmarks
 import UIKit
 #endif
 import Vision
-import FlatBuffers
 
 typealias Observation = VNHumanBodyPoseObservation
 /// Stores the landmarks and connections of a human body pose and draws them as
@@ -17,7 +16,7 @@ typealias Observation = VNHumanBodyPoseObservation
 /// - Tag: Pose
 struct Pose {
     /// The names and locations of the significant points on a human body.
-    private let landmarks: [Landmark]
+    let landmarks: [Landmark]
 
     /// A list of lines between landmarks for drawing a wireframe.
     private var connections: [Connection]!
@@ -30,9 +29,9 @@ struct Pose {
     let area: CGFloat
     
     /// The corresponding flatbuffer data of this Pose
-    var poseData: Data{
-        get {return poseData(landmarks)}
-    }
+//    var poseData: Data{
+//        get {return poseData(landmarks)}
+//    }
 
     /// Creates a `Pose` for each human body pose observation in the array.
     /// - Parameter observations: An array of human body pose observations.
@@ -169,22 +168,22 @@ extension Pose {
         return deltaX * deltaY
     }
     
-    func poseData(_ landmarks: [Landmark]) -> Data {
-        var builder = FlatBufferBuilder(initialSize: 1024)
-        
-        var landmarksData : [Offset] = []
-        for landmark in landmarks {
-            let name = builder.create(string: landmark.name.rawValue.rawValue)
-            let landmarkData = MController_Landmark.createLandmark(&builder, x: Float32(landmark.location.x), y: Float32(landmark.location.y), z: 0.0, confidence: 1.0, nameOffset: name)
-            landmarksData.append(landmarkData)
-        }
-        let landmarksDataOffset = builder.createVector(ofOffsets: landmarksData)
-        
-        let poseData = MController_Pose.createPose(&builder, landmarksVectorOffset: landmarksDataOffset)
-        builder.finish(offset: poseData)
-        
-        var data = builder.data
-
-        return data
-    }
+//    func poseData(_ landmarks: [Landmark]) -> Data {
+//        var builder = FlatBufferBuilder(initialSize: 1024)
+//
+//        var landmarksData : [Offset] = []
+//        for landmark in landmarks {
+//            let name = builder.create(string: landmark.name.rawValue.rawValue)
+//            let landmarkData = MController_Landmark.createLandmark(&builder, x: Float32(landmark.location.x), y: Float32(landmark.location.y), z: 0.0, confidence: 1.0, nameOffset: name)
+//            landmarksData.append(landmarkData)
+//        }
+//        let landmarksDataOffset = builder.createVector(ofOffsets: landmarksData)
+//
+//        let poseData = MController_Pose.createPose(&builder, landmarksVectorOffset: landmarksDataOffset)
+//        builder.finish(offset: poseData)
+//
+//        var data = builder.data
+//
+//        return data
+//    }
 }
