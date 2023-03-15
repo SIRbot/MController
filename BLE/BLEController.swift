@@ -30,6 +30,7 @@ class BLEController: BLEProtocol {
     
     var viewControllerDelegate: BLEProtocol? = nil
     
+    let virtualHIDDriver: BLEVirtualHIDDriver = BLEVirtualHIDDriver()
     
     func log(_ object: Any?) {
 //        appDelegate?.singleton.logger.log(object)
@@ -213,6 +214,8 @@ class BLEController: BLEProtocol {
     //
     func valueRead(charuuid: String, message: String) {
         log("valueRead : " + message)
+        
+        virtualHIDDriver.handleInput(input: message)
         
         viewControllerDelegate?.valueRead(charuuid: charuuid, message: message)
     }

@@ -11,32 +11,32 @@ import AppKit
 
 class BLEVirtualHIDDriver : NSObject{
     
-    let upKeyCode: CGKeyCode = 126
-    let downKeyCode: CGKeyCode = 125
-    let rightKeyCode: CGKeyCode = 124
-    let leftKeyCode: CGKeyCode = 123
-    let wKeyCode: CGKeyCode = 13
-    let sKeyCode: CGKeyCode = 1
-    let aKeyCode: CGKeyCode = 0
-    let dKeyCode: CGKeyCode = 2
-    let spaceKeyCode: CGKeyCode = 49
-    let oneKeyCode: CGKeyCode = 83
-    let twoKeyCode: CGKeyCode = 84 //2, down, 84
-    let threeKeyCode: CGKeyCode = 85
-    let fourKeyCode: CGKeyCode = 84 // 4, left, 86
-    let fiveKeyCode: CGKeyCode = 87
-    let sixKeyCode: CGKeyCode = 91 //6, right, 88
-    let sevenKeyCode: CGKeyCode = 89
-    let eightKeyCode: CGKeyCode = 91 // 8, up, 90
-    let nightKeyCode: CGKeyCode = 92
+    private let upKeyCode: CGKeyCode = 126
+    private let downKeyCode: CGKeyCode = 125
+    private let rightKeyCode: CGKeyCode = 124
+    private let leftKeyCode: CGKeyCode = 123
+    private let wKeyCode: CGKeyCode = 13
+    private let sKeyCode: CGKeyCode = 1
+    private let aKeyCode: CGKeyCode = 0
+    private let dKeyCode: CGKeyCode = 2
+    private let spaceKeyCode: CGKeyCode = 49
+    private let oneKeyCode: CGKeyCode = 83
+    private let twoKeyCode: CGKeyCode = 84 // 2, down, 84
+    private let threeKeyCode: CGKeyCode = 85
+    private let fourKeyCode: CGKeyCode = 86 // 4, left, 86
+    private let fiveKeyCode: CGKeyCode = 87
+    private let sixKeyCode: CGKeyCode = 88 //6, right, 88
+    private let sevenKeyCode: CGKeyCode = 89
+    private let eightKeyCode: CGKeyCode = 91 // 8, up, 90
+    private let nightKeyCode: CGKeyCode = 92
     
-    private func handleInput(input:String){
-        let event = input.split(separator: ", ")[0]
-        let key = input.split(separator: ", ")[1]
+    public func handleInput(input:String){
+        let event: String = String(input.split(separator: ", ")[0])
+        let key: String = String(input.split(separator: ", ")[1])
         if(event == "U"){
-            
+            keyboardUp(key)
         }else if(event == "D"){
-            
+            keyboardDown(key)
         }else{
             print("Error: invalid input")
             return
@@ -134,10 +134,14 @@ class BLEVirtualHIDDriver : NSObject{
             keyboardDown(aKeyCode)
         case "d":
             keyboardDown(dKeyCode)
-        case "4":
+        case "m_l":
             keyboardDown(fourKeyCode)
-        case "6":
+        case "m_r":
             keyboardDown(sixKeyCode)
+        case "m_u":
+            keyboardDown(eightKeyCode)
+        case "m_d":
+            keyboardDown(twoKeyCode)
         default:
             return
         }
@@ -153,10 +157,14 @@ class BLEVirtualHIDDriver : NSObject{
             keyboardUp(aKeyCode)
         case "d":
             keyboardUp(dKeyCode)
-        case "4":
+        case "m_l":
             keyboardUp(fourKeyCode)
-        case "6":
+        case "m_r":
             keyboardUp(sixKeyCode)
+        case "m_u":
+            keyboardUp(eightKeyCode)
+        case "m_d":
+            keyboardUp(twoKeyCode)
         default:
             return
         }

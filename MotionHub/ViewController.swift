@@ -15,14 +15,11 @@ class ViewController: NSViewController, NSWindowDelegate{
     @IBOutlet weak var logView: NSScrollView!
     @IBOutlet var logTextView: NSTextView!
     @IBOutlet weak var centralSwitch: NSSwitch!
-
-    let virtualHIDDriver: BLEVirtualHIDDriver = BLEVirtualHIDDriver()
     
     var appDelegate:AppDelegate? = nil
     
     let peripheralUUID = "AC7FA82C-ACC0-4DC1-AC09-4075B336B640"
     let characRead = "5DDA8FC4-D5D6-4E10-8A39-7928251965AC"
-//    let characWrite = "9B89E762-226A-4BBB-A381-A4B8CC6E1105"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,8 +29,6 @@ class ViewController: NSViewController, NSWindowDelegate{
         
         appDelegate =  NSApplication.shared.delegate as! AppDelegate?
         appDelegate!.singleton.logger.log("viewDidLoad")
-        
-//        sharedBrowser = PeerBrowser(delegate: self)
     }
 
     override var representedObject: Any? {
@@ -131,19 +126,6 @@ class ViewController: NSViewController, NSWindowDelegate{
 
                 self.addText(text: "request notification for charac :\n" + self.characRead)
                 self.appDelegate!.singleton.bleController.requestNotify(uuid: self.characRead)
-
-//                self.addText(text: "\nRead a value from peripheral " + self.characRead)
-//                self.appDelegate?.singleton.bleController.read(uuid: self.characRead)
-                
-//                self.appDelegate?.singleton.bleController.write(uuid: self.characWrite, message: "I am ok guy")
-//                self.addText(text: "\nwrite to peripheral : I am ok guy, char :" + self.characWrite)
-//
-//                self.appDelegate?.singleton.bleController.writeAsync(uuid: self.characWrite, message: "hello mate")
-//                self.addText(text: "\nwriteAsync to peripheral : hello mate, char :" + self.characWrite)
-
-                // start some timer, which will read or write data from / to peripheral
-                //self.timerRead = Timer.scheduledTimer(timeInterval: TimeInterval(2), target: self, selector: #selector(self.read), userInfo: nil, repeats: true)
-                //self.timerWrite = Timer.scheduledTimer(timeInterval: TimeInterval(5), target: self, selector: #selector(self.write), userInfo: nil, repeats: true)
                 
             }
         }else{
